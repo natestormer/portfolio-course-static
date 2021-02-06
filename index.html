@@ -1,0 +1,194 @@
+<!-- Tip: In VS Code, the snippet `html:5` will generate an html5 document skeleton -->
+<!-- Tip: In VS Code, you can hover over any html element to get a brief description and a link to MDN -->
+
+<!-- 
+  DOCTYPE tells the browser what flavor of html we are writing
+  Currently, we are declairing html5
+-->
+<!DOCTYPE html>
+<!-- 
+  The `<html>` tag is the top-level or "root" element of the document 
+  All other elements must be a decendant of this element
+  Ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/html
+-->
+<html lang="en">
+  <!-- 
+    The `<head>` tag is the document's brain 
+    It contains machine-readable info about the document
+    like title, scripts, style sheets
+    Ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head
+  -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | John Singer Sargent</title>
+  </head>
+  <!--  
+    The `<body>` tag contains all content of the HTML document
+    Ref: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/body
+  -->
+  <body>
+    <header>
+      <h1>John Singer Sargent</h1>
+      <nav>
+        <h2>Menu</h2>
+        <ul>
+          <li>
+            <!-- 
+              The `href` attribute on an `<a>` creates a hyperlink to different things
+              These things can be:
+              A url: https://google.com
+              A file:
+                relative to the root directory
+                /about.html
+                relative path to file
+                ./about.html
+              A location in the page:
+                /about.html#more-about-me
+                or the tope of the page: #top or #
+              An email address:
+                mailto:name@domain.com
+              A phone number
+                tel:1234567890
+            -->
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="/works">Works</a>
+          </li>
+          <li>
+            <a href="/resume.html">Résumé</a>
+          </li>
+          <li>
+            <a href="/writings">Writings</a>
+          </li>
+          <li>
+            <a href="/contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <article>
+      <hgroup>
+        <h1>
+          Hello,
+          <br />
+          I’m John S. Sargent
+        </h1>
+        <h2>Leading portraint painter of a generation.</h2>
+      </hgroup>
+      <p>
+        An American expatriate <strong>portrait</strong> and
+        <strong>landscape</strong> painter living in London, England.
+      </p>
+      <a href="#">Let's Work Together </a>
+      <br />
+      <!-- 
+        @Todo: Eventually, we will refactor this to contain a list of each work and link to its page.
+        For now, we will just serve a single image
+      -->
+      <a href="#">
+        <img
+          alt="An image of my most recent works."
+          height="359"
+          src="/img/slider.png"
+          width="1440"
+        />
+      </a>
+      <img
+        alt="A photograph of myself"
+        height="248"
+        src="/img/avatar.jpg"
+        width="248"
+      />
+      <p>
+        Prior to opening my studio in London, I studied in Paris, France under
+        <a href="https://en.wikipedia.org/wiki/Carolus-Duran">
+          <strong>Carolus-Duran</strong></a
+        >,
+        <a href="https://en.wikipedia.org/wiki/Carolus-Duran"
+          ><strong>James Carroll Beckwith</strong></a
+        >, and
+        <a href="https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat"
+          ><strong>Léon Bonnat</strong></a
+        >. I specialize in portrait, landscape and en plein air works executed
+        in oils, watercolor and charcoal.
+      </p>
+      <p>
+        My body of work has drawn much acclaim for my evocations of
+        Edwardian-era luxury
+      </p>
+      <section>
+        <h2>Latest Writings &amp; Rambles</h2>
+        <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
+        <ol>
+          <li>
+            <a href="#">
+              <!-- 
+                The `datetime` attribute accepts a machine-readable time string. Examples on MDN.
+                For our purpose we use `YYYY-MM-DD` here.
+              -->
+              <article>
+                <img
+                  alt="Monet, Soleil Levant - Painting"
+                  height="282"
+                  src="/img/monet-soleil-levant-landscape.jpg"
+                  width="514"
+                />
+                <time datetime="2021-02-04">Feb 04 2021</time>
+                <h3>My Take on the Impressionists &amp; Their Strokes</h3>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  alt="Velazques, Las Meninas - Painting"
+                  height="282"
+                  src="/img/velazques-las-meninas-landscape.jpg"
+                  width="514"
+                />
+                <time datetime="2021-01-22">Jan 22 2021</time>
+                <h3>Master Study: Diego Velázquez &amp; Tenebrism</h3>
+              </article>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <article>
+                <img
+                  alt="Rodin, Gates of Hell - Sculpture"
+                  height="282"
+                  src="/img/rodin-gates-of-hell-landscape.jpg"
+                  width="514"
+                />
+                <time datetime="2020-12-01">Dec 01 2020</time>
+                <h3>Auguste René Rodin, The Modern Sculptor</h3>
+              </article>
+            </a>
+          </li>
+        </ol>
+        <a href="/">More Articles</a>
+      </section>
+    </article>
+    <footer>
+      <p>&copy; 2021 johnsingersargent.com</p>
+      <ul>
+        <li>
+          <a href="#">LinkedIn</a>
+        </li>
+        <li>
+          <a href="#">Dribbble</a>
+        </li>
+        <li>
+          <a href="#">GitHub</a>
+        </li>
+        <li>
+          <a href="#">Twitter</a>
+        </li>
+      </ul>
+    </footer>
+  </body>
+</html>
