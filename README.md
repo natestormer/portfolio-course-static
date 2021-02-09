@@ -43,3 +43,7 @@ Changes made in each module are commited to their respective branches.
 #### Module 1 - HTML Basics
 
 Branch: [module-1-html-basics](https://github.com/natestormer/portfolio-course-static/tree/module-1-html-basics)
+
+#### Module 2 - CSS Basics
+
+Branch: [module-2-css-basics](https://github.com/natestormer/portfolio-course-static/tree/module-2-css-basics)
