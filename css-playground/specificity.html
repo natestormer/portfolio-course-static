@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testing CSS</title>
+    <style>
+      body {
+        padding: 48px;
+        color: darkslategrey;
+      }
+
+      h1 {
+        color: black;
+      }
+
+      /** 
+      SPECIFICITY
+      Calculation: 0 (inline), 0 (id), 0 (class), 0 (element)
+      then Top to Bottom evaluation
+
+      0,0,0,1
+      h1 { color: red; }
+
+      0,0,1,0
+      .title { color: green; }
+
+      0,1,0,0
+      #title { color: blue; }
+
+      1,0,0,0
+      <h1 style="color: blue;">Title</h1>
+
+      COMPARISON:
+
+      Selector 1
+      0,0,1,1
+      h1.title { ... }
+
+      Selector 2
+      0,0,1,0
+      .title { ... }
+
+      <h1 class="title" /> -> Selector 1 Wins
+      0,0,1,1 > 0,0,1,0
+    */
+    </style>
+  </head>
+  <body>
+    <h1>Almost before we knew it, we had left the ground.</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      pellentesque justo in auctor pellentesque. Fusce rhoncus libero diam, quis
+      rutrum dui consequat eget. Suspendisse efficitur faucibus lorem. Donec
+      lacinia, odio eget euismod condimentum, elit nulla accumsan ligula, et
+      euismod nisl dolor at purus. Morbi at felis ut ipsum placerat mollis. Nunc
+      tortor augue, luctus malesuada fringilla ullamcorper, congue eu leo. Sed
+      feugiat, lorem id congue mollis, nibh nibh egestas lectus, condimentum
+      iaculis velit mauris ac ipsum. Pellentesque quis viverra est, at lacinia
+      massa. Sed viverra justo enim, quis iaculis mi rhoncus eget. Morbi semper,
+      arcu et blandit dignissim, ante libero elementum tortor, ac tincidunt
+      magna mi nec mauris. Vivamus in euismod nulla. Aliquam mauris diam,
+      aliquam quis accumsan et, pulvinar ac dolor. Aenean sagittis erat urna, ac
+      vulputate nisi rhoncus sed. Cras metus tortor, faucibus ac posuere et,
+      dignissim sit amet leo.
+    </p>
+  </body>
+</html>

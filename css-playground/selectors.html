@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+    <style>
+      /** 
+        Element selectors
+      */
+      body {
+        padding: 48px;
+        font-size: 24px;
+        line-height: 1.5;
+      }
+
+      h1 {
+        color: black;
+      }
+
+      /**
+        Class selectors
+        <h1 class="title-2" />
+      */
+      .title-2 {
+        text-decoration: underline;
+      }
+
+      /**
+        ID selectors
+        <h1 id="last-title" />
+      */
+      #last-title {
+        padding-left: 24px;
+        border-left: 4px solid black;
+      }
+
+      /** 
+        Selectors can combine together
+      */
+      p strong {
+        text-decoration: line-through;
+      }
+
+      /**
+        Psuedo selectors
+      */
+      p strong:first-child /** same as :nth-child(1) */ {
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Title 1</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      pellentesque justo in auctor pellentesque.
+      <strong>Fusce rhoncus</strong> libero diam, quis rutrum dui consequat
+      eget. Suspendisse efficitur faucibus lorem. Donec lacinia, odio eget
+      euismod condimentum, elit nulla accumsan ligula, et euismod nisl dolor at
+      purus. Morbi at felis ut ipsum placerat mollis. Nunc tortor augue, luctus
+      malesuada fringilla ullamcorper, congue eu leo. Sed feugiat, lorem id
+      congue mollis, nibh nibh egestas lectus,
+      <strong>condimentum <em>iaculis</em></strong> velit mauris ac ipsum.
+      Pellentesque quis viverra est, at lacinia massa. Sed viverra justo enim,
+      quis iaculis mi rhoncus eget. Morbi semper, arcu et blandit dignissim,
+      ante libero elementum tortor, ac tincidunt magna mi nec mauris. Vivamus in
+      euismod nulla. Aliquam mauris diam, aliquam quis accumsan et, pulvinar ac
+      dolor. Aenean sagittis erat urna, ac vulputate nisi rhoncus sed. Cras
+      metus tortor, faucibus ac posuere et, dignissim sit amet leo.
+    </p>
+
+    <h1 class="title-2">Title 1</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      pellentesque justo in auctor pellentesque.
+      <strong>Fusce rhoncus</strong> libero diam, quis rutrum dui consequat
+      eget. Suspendisse efficitur faucibus lorem. Donec lacinia, odio eget
+      euismod condimentum, elit nulla accumsan ligula, et euismod nisl dolor at
+      purus. Morbi at felis ut ipsum placerat mollis. Nunc tortor augue, luctus
+      malesuada fringilla ullamcorper, congue eu leo. Sed feugiat, lorem id
+      congue mollis, nibh nibh egestas lectus,
+      <strong>condimentum <em>iaculis</em></strong> velit mauris ac ipsum.
+      Pellentesque quis viverra est, at lacinia massa. Sed viverra justo enim,
+      quis iaculis mi rhoncus eget. Morbi semper, arcu et blandit dignissim,
+      ante libero elementum tortor, ac tincidunt magna mi nec mauris. Vivamus in
+      euismod nulla. Aliquam mauris diam, aliquam quis accumsan et, pulvinar ac
+      dolor. Aenean sagittis erat urna, ac vulputate nisi rhoncus sed. Cras
+      metus tortor, faucibus ac posuere et, dignissim sit amet leo.
+    </p>
+
+    <h1 id="last-title" class="title-2">Title 1</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+      pellentesque justo in auctor pellentesque.
+      <strong>Fusce rhoncus</strong> libero diam, quis rutrum dui consequat
+      eget. Suspendisse efficitur faucibus lorem. Donec lacinia, odio eget
+      euismod condimentum, elit nulla accumsan ligula, et euismod nisl dolor at
+      purus. Morbi at felis ut ipsum placerat mollis. Nunc tortor augue, luctus
+      malesuada fringilla ullamcorper, congue eu leo. Sed feugiat, lorem id
+      congue mollis, nibh nibh egestas lectus,
+      <strong>condimentum <em>iaculis</em></strong> velit mauris ac ipsum.
+      Pellentesque quis viverra est, at lacinia massa. Sed viverra justo enim,
+      quis iaculis mi rhoncus eget. Morbi semper, arcu et blandit dignissim,
+      ante libero elementum tortor, ac tincidunt magna mi nec mauris. Vivamus in
+      euismod nulla. Aliquam mauris diam, aliquam quis accumsan et, pulvinar ac
+      dolor. Aenean sagittis erat urna, ac vulputate nisi rhoncus sed. Cras
+      metus tortor, faucibus ac posuere et, dignissim sit amet leo.
+    </p>
+  </body>
+</html>
