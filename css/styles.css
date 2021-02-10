@@ -10,11 +10,29 @@
 //
 *****************************
 *****************************/
+:root {
+  /* Define our color palette Custom Properties (CSS variables) */
+  --color-black: #0e1414;
+  --color-dark: #1f2525;
+  --color-light: #ececf0;
+  --color-white: #fff;
+
+  /* Define our thematic Custom Properties (CSS variables) */
+  --font-color: var(--color-dark);
+  --bg-main-color: var(--color-white);
+  --bg-secondary-color: var(--color-light);
+}
+
 html,
 body {
   /* Web safe font stacks: https://css-tricks.com/snippets/css/font-stacks/ */
+
+  /* font-size [font-size]/[line-height] font-family */
   font: normal 100%/1.5 "Inter", Arial, Helvetica, sans-serif; /* 100% font-size ~= 16px === 1rem */
-  color: #1f2525;
+
+  /* @Todo: these properties can be updated to support light/dark mode */
+  color: var(--font-color);
+  background-color: var(--bg-main-color);
 }
 
 /*****************************
