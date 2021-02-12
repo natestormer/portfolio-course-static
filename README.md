@@ -12,6 +12,8 @@ With this mindset, let's learn how we can demystify development. Throughout this
 
 ### Course Milestones
 
+We use this [Figma File](https://www.figma.com/file/noEnNgyrvsZg9Zeibo5rwD/Portfolio-Workshop?node-id=167%3A0) to plan our site.
+
 1. Build a site as static assets (HTML, CSS, JS) and host on Netlify.
 1. Convert the static assets to a Gatsby + React app so we can add fun interactions and dynamic data sourcing (this will exist in another repository).
 
@@ -47,3 +49,7 @@ Branch: [module-1-html-basics](https://github.com/natestormer/portfolio-course-s
 #### Module 2 - CSS Basics
 
 Branch: [module-2-css-basics](https://github.com/natestormer/portfolio-course-static/tree/module-2-css-basics)
+
+#### Module 3 - CSS Media Queries
+
+Branch: [module-3-css-media-queries](https://github.com/natestormer/portfolio-course-static/tree/module-3-css-media-queries)
