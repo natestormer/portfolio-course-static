@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries in CSS</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <style>
+      body,
+      html {
+        min-height: 100%;
+        padding: 10%;
+        box-sizing: border-box;
+      }
+
+      /* We can target media display types */
+      @media screen {
+        body {
+          border: 10px solid blue;
+        }
+      }
+
+      /* such as print */
+      @media print {
+        body {
+          border: 10px solid red;
+        }
+      }
+
+      /* 
+        and target aspect ratio of screen viewports:
+        min-aspect-ratio: 4:3
+        max-aspect-ratio: 16:9, etc.
+      */
+      @media (aspect-ratio: 1/1) {
+        body {
+          border: 10px solid darkturquoise;
+        }
+      }
+
+      /* and the orientation of the screen viewports */
+      @media (orientation: portrait) {
+        body {
+          background-color: khaki;
+        }
+      }
+
+      @media (orientation: landscape) {
+        body {
+          background-color: lightpink;
+        }
+      }
+
+      /* 
+        We can also target `media features` of the user agent.
+        Ex: hover support, color support, pixel density, 
+        user preferences for contrast + motion, and much more:
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features
+      */
+      @media (prefers-reduced-motion) {
+        a:hover {
+          transition: none;
+        }
+      }
+
+      /*  
+        We can combine queries with logical operators:
+        and, not, only, and comma
+        https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#logical_operators
+      */
+      @media screen and (min-width: 600px) {
+        h1 {
+          max-width: 10ch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="title1">Media Queries</h1>
+    <p class="body-text">
+      <strong class="strong">Body Text: </strong>Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Fusce varius augue id commodo condimentum.
+      Cras eget mi at orci auctor consectetur. Morbi dui nunc, scelerisque ac
+      lorem eu, hendrerit tristique ipsum. Praesent ut odio nec eros condimentum
+      finibus <a href="#">quis</a> et arcu. <em>In fringilla elit</em> ac neque
+      ullamcorper, nec semper ante sollicitudin. Donec facilisis, quam a
+      consequat mollis, mauris erat ultrices diam, sit amet bibendum augue
+      turpis vitae urna. Integer condimentum sit amet urna eget pharetra.
+      Quisque tempor, ex et venenatis interdum, metus purus porttitor arcu, vel
+      fermentum dui eros bibendum mi. Vivamus eget justo leo. Quisque lobortis
+      justo nec tincidunt commodo. Fusce in odio eleifend, scelerisque dolor a,
+      dapibus libero.
+    </p>
+  </body>
+</html>
