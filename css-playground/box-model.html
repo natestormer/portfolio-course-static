@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Box Model</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* 
+          `box-sizing` tells the agent how to calculate a box's dimensions 
+          `border-box` === width and height includes `border-width` and `padding` values
+        */
+        box-sizing: border-box;
+        font-size: 32px;
+      }
+
+      .box-1 {
+        max-width: 500px;
+        /* `auto` fills available space, thus, centering the box */
+        margin: 50px auto;
+        padding: 10%;
+        /* 
+          Shorthand syntax for dimensional values:
+          going clockwise: Top Right Bottom Left
+        */
+        padding: 10% 5%;
+        background-color: red;
+      }
+
+      .box-2 {
+        margin-top: 25px; /* This collapses because it's < 50px bottom margin of .box-2 */
+        background-color: blue;
+      }
+
+      /**
+        Display Property
+        values: `inline`, `block`, `inline-block`, `none`
+          [also: `flex`, `grid`] <- we will get to this later
+      **/
+
+      .block-1 {
+        background-color: salmon;
+      }
+
+      .block-2 {
+        display: inline;
+        background-color: skyblue;
+      }
+
+      .block-3 {
+        display: none; /* completely hides the element */
+        background-color: darkblue;
+      }
+
+      .img {
+        display: inline-block; /* this is default for images */
+        width: 300px;
+        height: 300px;
+      }
+
+      .span-1 {
+        height: 1000px; /* `inline` prevents this from being calculated */
+        background-color: tomato;
+      }
+
+      .span-2 {
+        /* 
+          `inline-block` 
+          allows for width and height properties to be set
+          while allowing the element to wrap and expand dimension
+          based on content within
+        */
+        display: inline-block;
+        height: 100px; /* now we can set `width` and `height` properties */
+        background-color: crimson;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box-1">Box 1</div>
+    <div class="box-2">Box 2</div>
+    <br />
+    <br />
+    <div class="block-1">This is block 1, a div and block by default</div>
+    <span class="span-1">Span 1, inline by default</span>
+    <img
+      class="img"
+      src="https://source.unsplash.com/random/200x200"
+      al="An image that is inline-block by default"
+    />
+    <span class="span-2">Span 2: this is just another span</span>
+    <div class="block-2">This is block 2</div>
+    <div class="block-3">This is block 3</div>
+  </body>
+</html>
