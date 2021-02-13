@@ -283,6 +283,35 @@ i,
 }
 
 /***
+// Cards
+***/
+.card {
+  background: var(--bg-main-color);
+  border: 1px solid var(--bg-secondary-color);
+  box-shadow: var(--shadow);
+}
+
+.card__media {
+  width: 100%;
+  max-width: none;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.card__content {
+  padding: 1.5rem; /* 24px */
+}
+
+.card__meta {
+  display: block;
+  margin-bottom: 1rem; /* 16px */
+}
+
+.card__title {
+  font-weight: bold;
+  font-size: 1.5rem; /* 24px */
+}
+
+/***
 // Page intro
 ***/
 .intro {
@@ -293,4 +322,20 @@ i,
   .intro {
     padding: 3rem 0; /* 48px 0 */
   }
+}
+
+/*****************************
+ *****************************
+//
+// Utilities
+//
+*****************************
+*****************************/
+
+.u-link-underline-reverse {
+  text-decoration: none !important;
+}
+
+.u-link-underline-reverse:hover {
+  text-decoration: underline !important;
 }

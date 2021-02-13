@@ -146,60 +146,72 @@
           <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
           <ol>
             <li>
-              <a href="#">
+              <a class="u-link-underline-reverse" href="#">
                 <!-- 
                 The `datetime` attribute accepts a machine-readable time string. Examples on MDN.
                 For our purpose we use `YYYY-MM-DD` here.
               -->
-                <article>
+                <article class="card">
                   <img
                     alt="Monet, Soleil Levant - Painting"
+                    class="card__media"
                     height="282"
                     src="/img/monet-soleil-levant-landscape.jpg"
                     width="514"
                   />
-                  <time class="caption-text" datetime="2021-02-04"
-                    >Feb 04 2021</time
-                  >
-                  <h3 class="strong">
-                    My Take on the Impressionists &amp; Their Strokes
-                  </h3>
+                  <div class="card__content">
+                    <time
+                      class="card__meta caption-text"
+                      class="caption-text"
+                      datetime="2021-02-04"
+                      >Feb 04 2021</time
+                    >
+                    <h3 class="card__title">
+                      My Take on the Impressionists &amp; Their Strokes
+                    </h3>
+                  </div>
                 </article>
               </a>
             </li>
             <li>
               <a href="#">
-                <article>
+                <article class="card">
                   <img
                     alt="Velazques, Las Meninas - Painting"
+                    class="card__media"
                     height="282"
                     src="/img/velazques-las-meninas-landscape.jpg"
                     width="514"
                   />
-                  <time class="caption-text" datetime="2021-01-22"
-                    >Jan 22 2021</time
-                  >
-                  <h3 class="strong">
-                    Master Study: Diego Velázquez &amp; Tenebrism
-                  </h3>
+                  <div class="card__content">
+                    <time class="card__meta caption-text" datetime="2021-01-22"
+                      >Jan 22 2021</time
+                    >
+                    <h3 class="card__title">
+                      Master Study: Diego Velázquez &amp; Tenebrism
+                    </h3>
+                  </div>
                 </article>
               </a>
             </li>
             <li>
               <a href="#">
-                <article>
+                <article class="card">
                   <img
                     alt="Rodin, Gates of Hell - Sculpture"
+                    class="card__media"
                     height="282"
                     src="/img/rodin-gates-of-hell-landscape.jpg"
                     width="514"
                   />
-                  <time class="caption-text" datetime="2020-12-01"
-                    >Dec 01 2020</time
-                  >
-                  <h3 class="strong">
-                    Auguste René Rodin, The Modern Sculptor
-                  </h3>
+                  <div class="card__content">
+                    <time class="card__meta caption-text" datetime="2020-12-01"
+                      >Dec 01 2020</time
+                    >
+                    <h3 class="card__title">
+                      Auguste René Rodin, The Modern Sculptor
+                    </h3>
+                  </div>
                 </article>
               </a>
             </li>
