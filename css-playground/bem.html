@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BEM</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      /*
+        BEM === Block, Element, Modifier
+      */
+
+      /* The block, or base component selector */
+      .component {
+        max-width: 470px;
+        margin: 24px;
+        padding: 16px;
+        border: 1px solid gray;
+      }
+
+      /* 
+        A modifier class, or a selector that extends upon the state of base component 
+      */
+      .component--wide {
+        max-width: 650px;
+      }
+
+      .component--shadow {
+        box-shadow: 0px 0px 10px darkgray;
+      }
+
+      /* An element, or ancestor of the component */
+      .component__title {
+        padding-bottom: 16px;
+        border-bottom: 1px solid gray;
+      }
+
+      .component__content {
+        padding: 8px;
+      }
+
+      .component__link {
+        display: block;
+        padding: 8px 16px 0;
+        line-height: 24px;
+        text-align: right;
+        text-decoration: none;
+      }
+
+      .component__link--subtract {
+        color: white;
+        background: blue;
+      }
+
+      .component__link:hover {
+        text-decoration: underline;
+      }
+
+      .component__link__icon {
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        text-align: center;
+        border: 1px solid lightgray;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="component">
+      <h1 class="component__title">Componnent Title</h1>
+      <p class="component__content">Here is some content...</p>
+      <a class="component__link" href="#">
+        Link
+        <span class="component__link__icon"> -> </span>
+      </a>
+    </div>
+
+    <div class="component component--wide">
+      <h1 class="component__title">Componnent Title</h1>
+      <p class="component__content">Here is some content...</p>
+      <a class="component__link" href="#">
+        Link
+        <span class="component__link__icon"> -> </span>
+      </a>
+    </div>
+
+    <div class="component component--shadow">
+      <h1 class="component__title">Componnent Title</h1>
+      <p class="component__content">Here is some content...</p>
+      <a class="component__link" href="#">
+        Link
+        <span class="component__link__icon"> -> </span>
+      </a>
+    </div>
+
+    <div class="component component--wide component--shadow">
+      <h1 class="component__title">Componnent Title</h1>
+      <p class="component__content">Here is some content...</p>
+      <a class="component__link component__link--subtract" href="#">
+        Link
+        <span class="component__link__icon"> -> </span>
+      </a>
+    </div>
+  </body>
+</html>
