@@ -265,6 +265,13 @@ i,
   line-height: 4.5rem; /* 72px */
   color: var(--bg-secondary-color);
   background: var(--font-color);
+  border: 1px solid transparent;
+}
+
+.button--outline {
+  color: var(--font-color);
+  background-color: transparent;
+  border-color: var(--font-color);
 }
 
 .button:hover,
