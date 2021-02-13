@@ -53,3 +53,7 @@ Branch: [module-2-css-basics](https://github.com/natestormer/portfolio-course-st
 #### Module 3 - CSS Media Queries
 
 Branch: [module-3-css-media-queries](https://github.com/natestormer/portfolio-course-static/tree/module-3-css-media-queries)
+
+#### Module 4 - CSS Box Model
+
+Branch: [module-4-css-box-model](https://github.com/natestormer/portfolio-course-static/tree/module-4-css-box-model)
