@@ -181,19 +181,19 @@ i,
 /***
 // Branding Component
 ***/
-.branding img {
+.branding__img {
   display: inline-block;
   width: 2.875rem; /* 46px */
   height: 3.09875rem; /* 49.58px */
   margin-right: 1.5rem; /* 24px */
 }
 
-.branding span {
+.branding__text {
   display: none;
 }
 
 @media all and (min-width: 1024px) {
-  .branding span {
+  .branding__text {
     display: inline;
   }
 }
@@ -217,17 +217,17 @@ i,
 /***
 // Nav Main
 ***/
-.nav-main li {
+.nav-main__item {
   display: block;
 }
 
 @media all and (min-width: 1024px) {
-  .nav-main li {
+  .nav-main__item {
     display: inline-block;
   }
 }
 
-.nav-main a {
+.nav-main__link {
   display: block;
   height: 6.75rem; /* 108px */
   padding: 0 1rem; /* 0 16px */
@@ -237,7 +237,7 @@ i,
 }
 
 @media all and (min-width: 1024px) {
-  .nav-main a {
+  .nav-main__link {
     height: 5rem; /* 80px */
     font-size: 1rem; /* 16px */
     line-height: 5rem; /* 80px */

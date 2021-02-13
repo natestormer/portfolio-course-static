@@ -33,14 +33,22 @@
     <header>
       <div class="max-width">
         <h1 class="branding">
-          <img src="/img/brandmark.svg" alt="" width="90" height="97" />
-          <span class="body-text strong"> John Singer Sargent </span>
+          <img
+            class="branding__img"
+            src="/img/brandmark.svg"
+            alt=""
+            width="90"
+            height="97"
+          />
+          <span class="branding__text body-text strong">
+            John Singer Sargent
+          </span>
         </h1>
         <nav>
           <h2>Menu</h2>
           <div class="nav-main">
-            <ul>
-              <li>
+            <ul class="nav-main__list">
+              <li class="nav-main__item">
                 <!-- 
               The `href` attribute on an `<a>` creates a hyperlink to different things
               These things can be:
@@ -58,19 +66,19 @@
               A phone number
                 tel:1234567890
             -->
-                <a href="/">Home</a>
+                <a class="nav-main__link" href="/">Home</a>
               </li>
-              <li>
-                <a href="/works">Works</a>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/works">Works</a>
               </li>
-              <li>
-                <a href="/resume.html">Résumé</a>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/resume.html">Résumé</a>
               </li>
-              <li>
-                <a href="/writings">Writings</a>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/writings">Writings</a>
               </li>
-              <li>
-                <a href="/contact.html">Contact</a>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/contact.html">Contact</a>
               </li>
             </ul>
           </div>
