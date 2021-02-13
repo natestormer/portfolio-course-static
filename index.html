@@ -140,11 +140,13 @@
         </p>
       </div>
       <!-- /end .max-width -->
-      <section>
+      <section class="latest-news">
         <div class="max-width">
-          <h2 class="title2">Latest Writings &amp; Rambles</h2>
+          <h2 class="latest-news__title title2">
+            Latest Writings &amp; Rambles
+          </h2>
           <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
-          <ol>
+          <ol class="latest-news__list">
             <li>
               <a class="u-link-underline-reverse" href="#">
                 <!-- 
@@ -174,7 +176,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="u-link-underline-reverse" href="#">
                 <article class="card">
                   <img
                     alt="Velazques, Las Meninas - Painting"
@@ -195,7 +197,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a class="u-link-underline-reverse" href="#">
                 <article class="card">
                   <img
                     alt="Rodin, Gates of Hell - Sculpture"
@@ -216,7 +218,13 @@
               </a>
             </li>
           </ol>
-          <a class="button button--outline" href="/writings/">More Articles</a>
+          <div class="latest-news__cta">
+            <a
+              class="latest-news__cta__button button button--outline"
+              href="/writings/"
+              >More Articles</a
+            >
+          </div>
         </div>
         <!-- /end .max-width -->
       </section>

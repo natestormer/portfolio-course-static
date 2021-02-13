@@ -268,18 +268,22 @@ i,
   border: 1px solid transparent;
 }
 
-.button--outline {
-  color: var(--font-color);
-  background-color: transparent;
-  border-color: var(--font-color);
-}
-
 .button:hover,
 .button:focus {
   text-decoration: underline;
   color: var(--font-color);
   background: var(--bg-secondary-color);
   box-shadow: var(--shadow);
+}
+
+.button--outline {
+  color: var(--font-color);
+  background-color: transparent;
+  border-color: var(--font-color);
+}
+
+.button--outline:hover {
+  border-color: transparent;
 }
 
 /***
@@ -321,6 +325,41 @@ i,
 @media all and (min-width: 1024px) {
   .intro {
     padding: 3rem 0; /* 48px 0 */
+  }
+}
+
+/***
+// Latest News Section
+***/
+.latest-news {
+  padding: 4.5rem 0; /* 72px 0 */
+  background: var(--bg-secondary-color);
+}
+
+@media all and (min-width: 1024px) {
+  .latest-news {
+    padding: 5rem 0; /* 80px 0 */
+  }
+}
+
+.latest-news__title {
+  margin-bottom: 1.5rem; /* 24px */
+  text-align: center;
+}
+
+.latest-news__cta {
+  margin-top: 2.5rem; /* 40px */
+  text-align: center;
+}
+
+.latest-news__cta__button {
+  display: block;
+}
+
+@media all and (min-width: 1024px) {
+  .latest-news__cta__button {
+    max-width: 338px; /* 338px */
+    margin: 0 auto;
   }
 }
 
