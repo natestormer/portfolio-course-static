@@ -57,3 +57,7 @@ Branch: [module-3-css-media-queries](https://github.com/natestormer/portfolio-co
 #### Module 4 - CSS Box Model
 
 Branch: [module-4-css-box-model](https://github.com/natestormer/portfolio-course-static/tree/module-4-css-box-model)
+
+#### Module 5 - BEM Methodology
+
+Branch: [module-5-BEM-methodology](https://github.com/natestormer/portfolio-course-static/tree/module-5-BEM-methodology)
