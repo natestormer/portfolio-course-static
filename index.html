@@ -31,15 +31,17 @@
   -->
   <body>
     <header>
-      <h1 class="body-text strong">
-        <img src="/img/brandmark.svg" alt="" width="90" height="97" />
-        John Singer Sargent
-      </h1>
-      <nav>
-        <h2>Menu</h2>
-        <ul>
-          <li>
-            <!-- 
+      <div class="max-width">
+        <h1 class="branding">
+          <img src="/img/brandmark.svg" alt="" width="90" height="97" />
+          <span class="body-text strong"> John Singer Sargent </span>
+        </h1>
+        <nav>
+          <h2>Menu</h2>
+          <div class="nav-main">
+            <ul>
+              <li>
+                <!-- 
               The `href` attribute on an `<a>` creates a hyperlink to different things
               These things can be:
               A url: https://google.com
@@ -56,38 +58,42 @@
               A phone number
                 tel:1234567890
             -->
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/works">Works</a>
-          </li>
-          <li>
-            <a href="/resume.html">Résumé</a>
-          </li>
-          <li>
-            <a href="/writings">Writings</a>
-          </li>
-          <li>
-            <a href="/contact.html">Contact</a>
-          </li>
-        </ul>
-      </nav>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/works">Works</a>
+              </li>
+              <li>
+                <a href="/resume.html">Résumé</a>
+              </li>
+              <li>
+                <a href="/writings">Writings</a>
+              </li>
+              <li>
+                <a href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /end .max-width -->
     </header>
     <article>
-      <hgroup>
-        <h1 class="title1">
-          Hello,
-          <br />
-          I’m John S. Sargent
-        </h1>
-        <h2>Leading portraint painter of a generation.</h2>
-      </hgroup>
-      <p>
-        An American expatriate <strong>portrait</strong> and
-        <strong>landscape</strong> painter living in London, England.
-      </p>
-      <a href="#">Let's Work Together </a>
-      <br />
+      <div class="max-width">
+        <hgroup class="intro">
+          <h1 class="title1">
+            Hello,
+            <br />
+            I’m John S. Sargent
+          </h1>
+          <h2 class="p strong">Leading portraint painter of a generation.</h2>
+        </hgroup>
+        <p>
+          An American expatriate <strong>portrait</strong> and
+          <strong>landscape</strong> painter living in London, England.
+        </p>
+        <a class="button" href="#">Let's Work Together </a>
+      </div>
       <!-- 
         @Todo: Eventually, we will refactor this to contain a list of each work and link to its page.
         For now, we will just serve a single image
@@ -100,109 +106,120 @@
           width="1440"
         />
       </a>
-      <img
-        alt="A photograph of myself"
-        height="248"
-        src="/img/avatar.jpg"
-        width="248"
-      />
-      <p>
-        Prior to opening my studio in London, I studied in Paris, France under
-        <a href="https://en.wikipedia.org/wiki/Carolus-Duran">
-          <strong>Carolus-Duran</strong></a
-        >,
-        <a href="https://en.wikipedia.org/wiki/Carolus-Duran"
-          ><strong>James Carroll Beckwith</strong></a
-        >, and
-        <a href="https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat"
-          ><strong>Léon Bonnat</strong></a
-        >. I specialize in portrait, landscape and en plein air works executed
-        in oils, watercolor and charcoal.
-      </p>
-      <p>
-        My body of work has drawn much acclaim for my evocations of
-        Edwardian-era luxury
-      </p>
+      <div class="max-width">
+        <img
+          alt="A photograph of myself"
+          height="248"
+          src="/img/avatar.jpg"
+          width="248"
+        />
+        <p>
+          Prior to opening my studio in London, I studied in Paris, France under
+          <a href="https://en.wikipedia.org/wiki/Carolus-Duran">
+            <strong>Carolus-Duran</strong></a
+          >,
+          <a href="https://en.wikipedia.org/wiki/Carolus-Duran"
+            ><strong>James Carroll Beckwith</strong></a
+          >, and
+          <a href="https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat"
+            ><strong>Léon Bonnat</strong></a
+          >. I specialize in portrait, landscape and en plein air works executed
+          in oils, watercolor and charcoal.
+        </p>
+        <p>
+          My body of work has drawn much acclaim for my evocations of
+          Edwardian-era luxury
+        </p>
+      </div>
+      <!-- /end .max-width -->
       <section>
-        <h2 class="title2">Latest Writings &amp; Rambles</h2>
-        <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
-        <ol>
-          <li>
-            <a href="#">
-              <!-- 
+        <div class="max-width">
+          <h2 class="title2">Latest Writings &amp; Rambles</h2>
+          <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
+          <ol>
+            <li>
+              <a href="#">
+                <!-- 
                 The `datetime` attribute accepts a machine-readable time string. Examples on MDN.
                 For our purpose we use `YYYY-MM-DD` here.
               -->
-              <article>
-                <img
-                  alt="Monet, Soleil Levant - Painting"
-                  height="282"
-                  src="/img/monet-soleil-levant-landscape.jpg"
-                  width="514"
-                />
-                <time class="caption-text" datetime="2021-02-04"
-                  >Feb 04 2021</time
-                >
-                <h3 class="strong">
-                  My Take on the Impressionists &amp; Their Strokes
-                </h3>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <article>
-                <img
-                  alt="Velazques, Las Meninas - Painting"
-                  height="282"
-                  src="/img/velazques-las-meninas-landscape.jpg"
-                  width="514"
-                />
-                <time class="caption-text" datetime="2021-01-22"
-                  >Jan 22 2021</time
-                >
-                <h3 class="strong">
-                  Master Study: Diego Velázquez &amp; Tenebrism
-                </h3>
-              </article>
-            </a>
-          </li>
-          <li>
-            <a href="#">
-              <article>
-                <img
-                  alt="Rodin, Gates of Hell - Sculpture"
-                  height="282"
-                  src="/img/rodin-gates-of-hell-landscape.jpg"
-                  width="514"
-                />
-                <time class="caption-text" datetime="2020-12-01"
-                  >Dec 01 2020</time
-                >
-                <h3 class="strong">Auguste René Rodin, The Modern Sculptor</h3>
-              </article>
-            </a>
-          </li>
-        </ol>
-        <a href="/">More Articles</a>
+                <article>
+                  <img
+                    alt="Monet, Soleil Levant - Painting"
+                    height="282"
+                    src="/img/monet-soleil-levant-landscape.jpg"
+                    width="514"
+                  />
+                  <time class="caption-text" datetime="2021-02-04"
+                    >Feb 04 2021</time
+                  >
+                  <h3 class="strong">
+                    My Take on the Impressionists &amp; Their Strokes
+                  </h3>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article>
+                  <img
+                    alt="Velazques, Las Meninas - Painting"
+                    height="282"
+                    src="/img/velazques-las-meninas-landscape.jpg"
+                    width="514"
+                  />
+                  <time class="caption-text" datetime="2021-01-22"
+                    >Jan 22 2021</time
+                  >
+                  <h3 class="strong">
+                    Master Study: Diego Velázquez &amp; Tenebrism
+                  </h3>
+                </article>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <article>
+                  <img
+                    alt="Rodin, Gates of Hell - Sculpture"
+                    height="282"
+                    src="/img/rodin-gates-of-hell-landscape.jpg"
+                    width="514"
+                  />
+                  <time class="caption-text" datetime="2020-12-01"
+                    >Dec 01 2020</time
+                  >
+                  <h3 class="strong">
+                    Auguste René Rodin, The Modern Sculptor
+                  </h3>
+                </article>
+              </a>
+            </li>
+          </ol>
+          <a href="/">More Articles</a>
+        </div>
+        <!-- /end .max-width -->
       </section>
     </article>
-    <footer>
-      <p>&copy; 2021 johnsingersargent.com</p>
-      <ul>
-        <li>
-          <a href="#">LinkedIn</a>
-        </li>
-        <li>
-          <a href="#">Dribbble</a>
-        </li>
-        <li>
-          <a href="#">GitHub</a>
-        </li>
-        <li>
-          <a href="#">Twitter</a>
-        </li>
-      </ul>
-    </footer>
+    <div class="max-width">
+      <footer class="footer">
+        <p>&copy; 2021 johnsingersargent.com</p>
+        <ul>
+          <li>
+            <a href="#">LinkedIn</a>
+          </li>
+          <li>
+            <a href="#">Dribbble</a>
+          </li>
+          <li>
+            <a href="#">GitHub</a>
+          </li>
+          <li>
+            <a href="#">Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- /end .max-width-->
   </body>
 </html>

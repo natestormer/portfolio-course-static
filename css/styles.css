@@ -21,6 +21,9 @@
   --font-color: var(--color-dark);
   --bg-main-color: var(--color-white);
   --bg-secondary-color: var(--color-light);
+
+  /* Define stylistic properties */
+  --shadow: 0px 4px 16px 8px rgba(31, 37, 37, 0.15);
 }
 
 html,
@@ -33,6 +36,14 @@ body {
   /* @Todo: these properties can be updated to support light/dark mode */
   color: var(--font-color);
   background-color: var(--bg-main-color);
+}
+
+/* 
+  Set all box sizing width/heights 
+  to account for border and padding
+*/
+* {
+  box-sizing: border-box;
 }
 
 img {
@@ -157,4 +168,122 @@ em,
 i,
 .itallic {
   font-style: italic;
+}
+
+/*****************************
+ *****************************
+//
+// Components
+//
+*****************************
+*****************************/
+
+/***
+// Branding Component
+***/
+.branding img {
+  display: inline-block;
+  width: 2.875rem; /* 46px */
+  height: 3.09875rem; /* 49.58px */
+  margin-right: 1.5rem; /* 24px */
+}
+
+.branding span {
+  display: none;
+}
+
+@media all and (min-width: 1024px) {
+  .branding span {
+    display: inline;
+  }
+}
+
+/***
+// Content Max Width Wrapper
+***/
+.max-width {
+  width: 100%;
+  max-width: 71.25rem; /* 1140px */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media all and (min-width: 1024px) {
+  .max-width {
+    padding: 0 3rem;
+  }
+}
+
+/***
+// Nav Main
+***/
+.nav-main li {
+  display: block;
+}
+
+@media all and (min-width: 1024px) {
+  .nav-main li {
+    display: inline-block;
+  }
+}
+
+.nav-main a {
+  display: block;
+  height: 6.75rem; /* 108px */
+  padding: 0 1rem; /* 0 16px */
+  text-decoration: none;
+  font-size: 2rem; /* 32px */
+  line-height: 6.75rem; /* 108px */
+}
+
+@media all and (min-width: 1024px) {
+  .nav-main a {
+    height: 5rem; /* 80px */
+    font-size: 1rem; /* 16px */
+    line-height: 5rem; /* 80px */
+  }
+}
+
+/***
+// Footer
+***/
+.footer {
+  margin-top: 2rem; /* 32px */
+  padding-top: 2rem; /* 32px */
+  padding-bottom: 2rem; /* 32px */
+  border-top: 0.5rem solid var(--bg-secondary-color); /* 8px border */
+}
+
+/***
+// Buttons
+***/
+.button {
+  display: inline-block;
+  height: 4.5rem; /* 72px */
+  padding: 0 1rem; /* 1 16px */
+  text-decoration: none;
+  line-height: 4.5rem; /* 72px */
+  color: var(--bg-secondary-color);
+  background: var(--font-color);
+}
+
+.button:hover,
+.button:focus {
+  text-decoration: underline;
+  color: var(--font-color);
+  background: var(--bg-secondary-color);
+  box-shadow: var(--shadow);
+}
+
+/***
+// Page intro
+***/
+.intro {
+  padding: 2.5rem 0; /* 40px 0 */
+}
+
+@media all and (min-width: 1024px) {
+  .intro {
+    padding: 3rem 0; /* 48px 0 */
+  }
 }
