@@ -16,10 +16,12 @@
   --color-dark: #1f2525;
   --color-light: #ececf0;
   --color-white: #fff;
+  --color-white-50o: rgba(255, 255, 255, 0.5);
 
   /* Define our thematic Custom Properties (CSS variables) */
   --font-color: var(--color-dark);
   --bg-main-color: var(--color-white);
+  --bg-main-color-50o: var(--color-white-50o);
   --bg-secondary-color: var(--color-light);
 
   /* Define stylistic properties */
@@ -181,8 +183,15 @@ i,
 /***
 // Header Component
 ***/
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background: var(--bg-main-color);
+}
+
 @media all and (min-width: 1024px) {
-  .header {
+  .header__layout {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -236,13 +245,31 @@ i,
 // Nav Main
 ***/
 .nav-main {
-  margin-left: -1rem; /* -16px === .max-width padding */
-  margin-right: -1rem; /* -16px === .max-width padding */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-main-color-50o);
+  backdrop-filter: blur(16px);
+}
+
+.nav-main--mobile-show {
+  display: block;
 }
 
 @media all and (min-width: 1024px) {
   .nav-main {
+    position: static;
+    top: auto;
+    left: auto;
+    display: block !important;
+    width: auto;
+    height: auto;
     margin: 0;
+    background: transparent;
+    backdrop-filter: none;
   }
 }
 
@@ -257,12 +284,49 @@ i,
 }
 
 .nav-main__link {
+  position: relative;
   display: block;
   height: 6.75rem; /* 108px */
   padding: 0 1rem; /* 0 16px */
   text-decoration: none;
   font-size: 2rem; /* 32px */
   line-height: 6.75rem; /* 108px */
+}
+
+@media all and (min-width: 1024px) {
+  .nav-main__link {
+    font-weight: bold;
+  }
+}
+
+.nav-main__link:hover::before,
+.nav-main__link:focus::before {
+  opacity: 0.6;
+}
+
+.nav-main__link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0.25rem; /* 4px */
+  height: 100%;
+  opacity: 0;
+  background: var(--font-color);
+}
+
+@media all and (min-width: 1024px) {
+  .nav-main__link::before {
+    top: auto;
+    bottom: 0;
+    width: 100%;
+    height: 0.25rem; /* 4px */
+  }
+}
+
+.nav-main__link--current::before {
+  opacity: 1;
 }
 
 @media all and (min-width: 1024px) {
