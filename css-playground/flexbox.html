@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+      }
+
+      body {
+        padding: 10%;
+        background: lightgray;
+      }
+
+      .flexcontainer {
+        display: flex;
+        padding: 1rem;
+        background: darkslategrey;
+      }
+
+      .flex-item {
+        margin: 10px;
+        padding: 2%;
+        background: white;
+        border: 1px solid lightgray;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Flex Container Properties</h1>
+    <h2 style="margin-top: 10%">Main Axis Control</h2>
+    <style>
+      /* Default Flexbox */
+      .fc1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: stretch; /* cross-axis layout */
+      }
+
+      .fc1__item {
+        /**
+          equates to shorthand:
+          flex: 0 0 auto;
+        */
+        flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: auto;
+      }
+
+      .fc1__item:nth-child(1) {
+        height: 75px; /* all other items will stretch to this height because its the tallest item */
+      }
+    </style>
+    <h4>Default Behavior:</h4>
+    <div class="flexcontainer fc1">
+      <div class="flex-item fc1__item">Flex Item 1</div>
+      <div class="flex-item fc1__item">Flex Item 2</div>
+      <div class="flex-item fc1__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      /* Centered on Main Axis */
+      .fc2 {
+        justify-content: center;
+      }
+    </style>
+    <h4>Centered on Main Axis:</h4>
+    <div class="flexcontainer fc2">
+      <div class="flex-item fc2__item">Flex Item 1</div>
+      <div class="flex-item fc2__item">Flex Item 2</div>
+      <div class="flex-item fc2__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc3 {
+        justify-content: flex-end;
+      }
+    </style>
+    <h4>Aligned to End of Main Axis:</h4>
+    <div class="flexcontainer fc3">
+      <div class="flex-item fc3__item">Flex Item 1</div>
+      <div class="flex-item fc3__item">Flex Item 2</div>
+      <div class="flex-item fc3__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc4 {
+        justify-content: space-between;
+      }
+    </style>
+    <h4>Adds Equal Space Between Items:</h4>
+    <div class="flexcontainer fc4">
+      <div class="flex-item fc4__item">Flex Item 1</div>
+      <div class="flex-item fc4__item">Flex Item 2</div>
+      <div class="flex-item fc4__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc5 {
+        justify-content: space-around;
+      }
+    </style>
+    <h4>Adds Equal Space Around Items:</h4>
+    <div class="flexcontainer fc5">
+      <div class="flex-item fc5__item">Flex Item 1</div>
+      <div class="flex-item fc5__item">Flex Item 2</div>
+      <div class="flex-item fc5__item">Flex Item 3</div>
+    </div>
+
+    <h2 style="margin-top: 10%">Cross Axis Control</h2>
+    <style>
+      .fc6 {
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .fc6__item:nth-child(2) {
+        height: 200px;
+      }
+    </style>
+    <h4>Align Items to Center of Cross Axis:</h4>
+    <div class="flexcontainer fc6">
+      <div class="flex-item fc6__item">Flex Item 1</div>
+      <div class="flex-item fc6__item">Flex Item 2</div>
+      <div class="flex-item fc6__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc7 {
+        justify-content: space-around;
+        align-items: flex-end;
+      }
+
+      .fc7__item:nth-child(2) {
+        height: 200px;
+      }
+    </style>
+    <h4>Align Items to End of Cross Axis:</h4>
+    <div class="flexcontainer fc7">
+      <div class="flex-item fc7__item">Flex Item 1</div>
+      <div class="flex-item fc7__item">Flex Item 2</div>
+      <div class="flex-item fc7__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc8 {
+        justify-content: space-around;
+        align-items: stretch;
+      }
+
+      .fc8__item:nth-child(2) {
+        height: 200px;
+      }
+    </style>
+    <h4>Align Items to End of Cross Axis:</h4>
+    <div class="flexcontainer fc8">
+      <div class="flex-item fc8__item">Flex Item 1</div>
+      <div class="flex-item fc8__item">Flex Item 2</div>
+      <div class="flex-item fc8__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc9 {
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      .fc9__item:nth-child(2) {
+        height: 200px;
+      }
+    </style>
+    <h4>Align Items to Start of Cross Axis:</h4>
+    <div class="flexcontainer fc9">
+      <div class="flex-item fc9__item">Flex Item 1</div>
+      <div class="flex-item fc9__item">Flex Item 2</div>
+      <div class="flex-item fc9__item">Flex Item 3</div>
+    </div>
+
+    <h2 style="margin-top: 10%">Direction Control</h2>
+    <style>
+      .fc10 {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+      }
+    </style>
+    <h4>Flip Main Axis Horizontally:</h4>
+    <div class="flexcontainer fc10">
+      <div class="flex-item fc10__item">Flex Item 1</div>
+      <div class="flex-item fc10__item">Flex Item 2</div>
+      <div class="flex-item fc10__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc11 {
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 500px;
+      }
+    </style>
+    <h4>Flip Main Axis Vertically:</h4>
+    <div class="flexcontainer fc11">
+      <div class="flex-item fc11__item">Flex Item 1</div>
+      <div class="flex-item fc11__item">Flex Item 2</div>
+      <div class="flex-item fc11__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc12 {
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        min-height: 500px;
+      }
+    </style>
+    <h4>Flip Main Axis Vertically and Reverse:</h4>
+    <div class="flexcontainer fc12">
+      <div class="flex-item fc12__item">Flex Item 1</div>
+      <div class="flex-item fc12__item">Flex Item 2</div>
+      <div class="flex-item fc12__item">Flex Item 3</div>
+    </div>
+
+    <h2 style="margin-top: 10%">Wrapping</h2>
+    <style>
+      .fc13 {
+        flex-wrap: nowrap;
+      }
+    </style>
+    <h4>Default - No Wrapping:</h4>
+    <div class="flexcontainer fc13">
+      <div class="flex-item fc13__item">
+        Flex Item 1
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 2
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 3
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 4
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 5
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 6
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 7
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 8
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 9
+        <div style="width: 90px"></div>
+      </div>
+      <div class="flex-item fc13__item">
+        Flex Item 10
+        <div style="width: 90px"></div>
+      </div>
+    </div>
+
+    <style>
+      .fc14 {
+        flex-wrap: wrap;
+      }
+    </style>
+    <h4>Wrap:</h4>
+    <div class="flexcontainer fc14">
+      <div class="flex-item fc14__item">
+        Flex Item 1
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 2
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 3
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 4
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 5
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 6
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 7
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 8
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 9
+        <div style="width: 200px"></div>
+      </div>
+      <div class="flex-item fc14__item">
+        Flex Item 10
+        <div style="width: 200px"></div>
+      </div>
+    </div>
+
+    <h1>Flex Item Properties</h1>
+
+    <style>
+      .fc15 {
+        justify-content: space-between;
+      }
+
+      .fc15__item:nth-child(2) {
+        flex-grow: 2;
+      }
+
+      .fc15__item:nth-child(3) {
+        flex-grow: 1;
+      }
+    </style>
+    <h4>Flex Grow:</h4>
+    <div class="flexcontainer fc15">
+      <div class="flex-item fc15__item">Flex Item 1</div>
+      <div class="flex-item fc15__item">Flex Item 2</div>
+      <div class="flex-item fc15__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc16 {
+        justify-content: space-between;
+      }
+
+      .fc16__item:nth-child(1) {
+        flex-shrink: 20;
+        width: 500px;
+      }
+
+      .fc16__item:nth-child(2) {
+        width: 50%;
+        flex-grow: 1;
+      }
+
+      .fc16__item:nth-child(3) {
+        width: 50%;
+        flex-grow: 1;
+      }
+    </style>
+    <h4>Flex Shrink:</h4>
+    <div class="flexcontainer fc16">
+      <div class="flex-item fc16__item">Flex Item 1</div>
+      <div class="flex-item fc16__item">Flex Item 2</div>
+      <div class="flex-item fc16__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc17 {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .fc17__item:nth-child(1) {
+        align-self: flex-end;
+      }
+
+      .fc17__item:nth-child(2) {
+        height: 500px;
+      }
+
+      .fc17__item:nth-child(3) {
+        align-self: flex-start;
+      }
+    </style>
+    <h4>Align Self:</h4>
+    <div class="flexcontainer fc17">
+      <div class="flex-item fc17__item">Flex Item 1</div>
+      <div class="flex-item fc17__item">Flex Item 2</div>
+      <div class="flex-item fc17__item">Flex Item 3</div>
+    </div>
+
+    <style>
+      .fc18 {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .fc18__item:nth-child(1) {
+        order: 2;
+      }
+
+      .fc18__item:nth-child(2) {
+        order: 1;
+      }
+
+      .fc18__item:nth-child(3) {
+        order: -1;
+      }
+    </style>
+    <h4>Ordering:</h4>
+    <div class="flexcontainer fc18">
+      <div class="flex-item fc18__item">Flex Item 1</div>
+      <div class="flex-item fc18__item">Flex Item 2</div>
+      <div class="flex-item fc18__item">Flex Item 3</div>
+      <div class="flex-item fc18__item">Flex Item 4</div>
+    </div>
+  </body>
+</html>
