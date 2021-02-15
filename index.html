@@ -31,7 +31,7 @@
   -->
   <body>
     <header>
-      <div class="max-width">
+      <div class="header max-width">
         <h1 class="branding">
           <img
             class="branding__img"
@@ -45,7 +45,7 @@
           </span>
         </h1>
         <nav>
-          <h2>Menu</h2>
+          <h2 class="u-hidden-visually">Menu</h2>
           <div class="nav-main">
             <ul class="nav-main__list">
               <li class="nav-main__item">
@@ -86,21 +86,28 @@
       </div>
       <!-- /end .max-width -->
     </header>
-    <article>
+    <article class="page page--home">
       <div class="max-width">
-        <hgroup class="intro">
-          <h1 class="title1">
-            Hello,
-            <br />
-            I’m John S. Sargent
-          </h1>
-          <h2 class="p strong">Leading portraint painter of a generation.</h2>
-        </hgroup>
-        <p>
-          An American expatriate <strong>portrait</strong> and
-          <strong>landscape</strong> painter living in London, England.
-        </p>
-        <a class="button" href="/contact.html">Let's Work Together </a>
+        <div class="intro page--home__intro">
+          <hgroup>
+            <h1 class="title1">
+              Hello,
+              <br />
+              I’m John S. Sargent
+            </h1>
+            <h2 class="p strong page--home__intro__subtitle">
+              Leading portraint painter of a generation.
+            </h2>
+          </hgroup>
+          <p>
+            An American expatriate <strong>portrait</strong> and
+            <strong>landscape</strong> painter living in London, England.
+          </p>
+          <a class="button page--home__intro__button" href="/contact.html"
+            >Let's Work Together
+          </a>
+        </div>
+        <!-- /end .intro-->
       </div>
       <!-- 
         @Todo: Eventually, we will refactor this to contain a list of each work and link to its page.
@@ -109,35 +116,43 @@
       <a href="#">
         <img
           alt="An image of my most recent works."
+          class="page--home__works-img"
           height="359"
           src="/img/slider.png"
           width="1440"
         />
       </a>
       <div class="max-width">
-        <img
-          alt="A photograph of myself"
-          height="248"
-          src="/img/avatar.jpg"
-          width="248"
-        />
-        <p>
-          Prior to opening my studio in London, I studied in Paris, France under
-          <a href="https://en.wikipedia.org/wiki/Carolus-Duran">
-            <strong>Carolus-Duran</strong></a
-          >,
-          <a href="https://en.wikipedia.org/wiki/Carolus-Duran"
-            ><strong>James Carroll Beckwith</strong></a
-          >, and
-          <a href="https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat"
-            ><strong>Léon Bonnat</strong></a
-          >. I specialize in portrait, landscape and en plein air works executed
-          in oils, watercolor and charcoal.
-        </p>
-        <p>
-          My body of work has drawn much acclaim for my evocations of
-          Edwardian-era luxury
-        </p>
+        <div class="bio u-clearfix">
+          <img
+            alt="A photograph of myself"
+            class="bio__img"
+            height="248"
+            src="/img/avatar.jpg"
+            width="248"
+          />
+          <div class="bio__content">
+            <p class="body-text">
+              Prior to opening my studio in London, I studied in Paris, France
+              under
+              <a href="https://en.wikipedia.org/wiki/Carolus-Duran">
+                <strong>Carolus-Duran</strong></a
+              >,
+              <a href="https://en.wikipedia.org/wiki/Carolus-Duran"
+                ><strong>James Carroll Beckwith</strong></a
+              >, and
+              <a href="https://en.wikipedia.org/wiki/L%C3%A9on_Bonnat"
+                ><strong>Léon Bonnat</strong></a
+              >. I specialize in portrait, landscape and en plein air works
+              executed in oils, watercolor and charcoal.
+            </p>
+            <p class="body-text">
+              My body of work has drawn much acclaim for my evocations of
+              Edwardian-era luxury.
+            </p>
+          </div>
+        </div>
+        <!-- /end .bio -->
       </div>
       <!-- /end .max-width -->
       <section class="latest-news">
@@ -147,13 +162,16 @@
           </h2>
           <!-- Our latest news is a list of articles ordered by date, therefore we should use an `<ol>` -->
           <ol class="latest-news__list">
-            <li>
-              <a class="u-link-underline-reverse" href="#">
+            <li class="latest-news__item">
+              <a
+                class="latest-news__item__link u-link-underline-reverse"
+                href="#"
+              >
                 <!-- 
                 The `datetime` attribute accepts a machine-readable time string. Examples on MDN.
                 For our purpose we use `YYYY-MM-DD` here.
               -->
-                <article class="card">
+                <article class="latest-news__item__card card">
                   <img
                     alt="Monet, Soleil Levant - Painting"
                     class="card__media"
@@ -175,9 +193,12 @@
                 </article>
               </a>
             </li>
-            <li>
-              <a class="u-link-underline-reverse" href="#">
-                <article class="card">
+            <li class="latest-news__item">
+              <a
+                class="latest-news__item__link u-link-underline-reverse"
+                href="#"
+              >
+                <article class="latest-news__item__card card">
                   <img
                     alt="Velazques, Las Meninas - Painting"
                     class="card__media"
@@ -196,9 +217,12 @@
                 </article>
               </a>
             </li>
-            <li>
-              <a class="u-link-underline-reverse" href="#">
-                <article class="card">
+            <li class="latest-news__item">
+              <a
+                class="latest-news__item__link u-link-underline-reverse"
+                href="#"
+              >
+                <article class="latest-news__item__card card">
                   <img
                     alt="Rodin, Gates of Hell - Sculpture"
                     class="card__media"
@@ -232,18 +256,18 @@
     <div class="max-width">
       <footer class="footer">
         <p>&copy; 2021 johnsingersargent.com</p>
-        <ul>
+        <ul class="footer__social">
           <li>
-            <a href="#">LinkedIn</a>
+            <a class="footer__social__link" href="#">LinkedIn</a>
           </li>
           <li>
-            <a href="#">Dribbble</a>
+            <a class="footer__social__link" href="#">Dribbble</a>
           </li>
           <li>
-            <a href="#">GitHub</a>
+            <a class="footer__social__link" href="#">GitHub</a>
           </li>
           <li>
-            <a href="#">Twitter</a>
+            <a class="footer__social__link" href="#">Twitter</a>
           </li>
         </ul>
       </footer>

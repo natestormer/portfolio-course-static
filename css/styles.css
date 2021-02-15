@@ -179,8 +179,26 @@ i,
 *****************************/
 
 /***
+// Header Component
+***/
+@media all and (min-width: 1024px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/***
 // Branding Component
 ***/
+@media all and (min-width: 1024px) {
+  .branding {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .branding__img {
   display: inline-block;
   width: 2.875rem; /* 46px */
@@ -217,14 +235,25 @@ i,
 /***
 // Nav Main
 ***/
-.nav-main__item {
-  display: block;
+.nav-main {
+  margin-left: -1rem; /* -16px === .max-width padding */
+  margin-right: -1rem; /* -16px === .max-width padding */
 }
 
 @media all and (min-width: 1024px) {
-  .nav-main__item {
-    display: inline-block;
+  .nav-main {
+    margin: 0;
   }
+}
+
+@media all and (min-width: 1024px) {
+  .nav-main__list {
+    display: flex;
+  }
+}
+
+.nav-main__item {
+  display: block;
 }
 
 .nav-main__link {
@@ -251,7 +280,28 @@ i,
   margin-top: 2rem; /* 32px */
   padding-top: 2rem; /* 32px */
   padding-bottom: 2rem; /* 32px */
+  text-align: center;
+  font-size: 0.8125rem; /* 13px */
   border-top: 0.5rem solid var(--bg-secondary-color); /* 8px border */
+}
+
+@media all and (min-width: 1024px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+.footer__social {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__social__link {
+  display: block;
+  padding: 1rem 0.5rem; /* 16px 8px */
 }
 
 /***
@@ -261,6 +311,7 @@ i,
   display: inline-block;
   height: 4.5rem; /* 72px */
   padding: 0 1rem; /* 1 16px */
+  text-align: center;
   text-decoration: none;
   line-height: 4.5rem; /* 72px */
   color: var(--bg-secondary-color);
@@ -329,6 +380,47 @@ i,
 }
 
 /***
+// Bio Section
+***/
+.bio {
+  padding: 4.5rem 0; /* 72px 0 */
+}
+
+@media all and (min-width: 1024px) {
+  .bio {
+    padding-right: 8.3%;
+    padding-left: 8.3%;
+  }
+}
+
+.bio__img {
+  display: block;
+  max-width: 10.3125rem; /* 165px */
+  margin-bottom: 1.5rem; /* 24px */
+  border-radius: 50%;
+}
+
+@media all and (min-width: 1024px) {
+  .bio__img {
+    max-width: 15.5rem; /* 248px */
+    margin-bottom: 0;
+    margin-right: 4.5rem; /* 72px */
+    float: left;
+    shape-outside: circle(9rem);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .bio__content {
+    margin-top: 6%;
+  }
+}
+
+.bio__content p {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/***
 // Latest News Section
 ***/
 .latest-news {
@@ -347,6 +439,38 @@ i,
   text-align: center;
 }
 
+@media all and (min-width: 1024px) {
+  .latest-news__list {
+    display: flex;
+    align-items: stretch;
+    margin: 0 -0.5rem;
+  }
+}
+
+.latest-news__item {
+  margin: 1rem 0; /* 16px 0 */
+}
+
+@media all and (min-width: 1024px) {
+  .latest-news__item {
+    flex: 1 1 33.333%;
+    margin: 0 0.5rem; /* 8px */
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .latest-news__item__link {
+    display: block;
+    height: 100%;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .latest-news__item__card {
+    height: 100%;
+  }
+}
+
 .latest-news__cta {
   margin-top: 2.5rem; /* 40px */
   text-align: center;
@@ -358,9 +482,43 @@ i,
 
 @media all and (min-width: 1024px) {
   .latest-news__cta__button {
-    max-width: 338px; /* 338px */
+    max-width: 21.125rem; /* 338px */
     margin: 0 auto;
   }
+}
+
+/*****************************
+ *****************************
+//
+// Page Components
+//
+*****************************
+*****************************/
+
+/***
+// Homepage
+***/
+.page--home__intro__subtitle {
+  margin-top: 2rem; /* 32px */
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+@media all and (min-width: 1024px) {
+  .page--home__intro__subtitle {
+    margin-top: 2.5rem; /* 40px */
+    font-size: 1.5rem; /* 24px */
+  }
+}
+
+.page--home__intro__button {
+  display: block;
+  max-width: 16.125rem; /* 258px */
+  margin-top: 2.5rem; /* 40px */
+  margin-bottom: 1rem; /* 16px */
+}
+
+.page--home__works-img {
+  margin: 0 auto;
 }
 
 /*****************************
@@ -377,4 +535,31 @@ i,
 
 .u-link-underline-reverse:hover {
   text-decoration: underline !important;
+}
+
+/* Completely remove from the flow but leave available to screen readers. */
+.u-hidden-visually {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+}
+
+/*
+  Clearfix for floats:
+  https://css-tricks.com/snippets/css/clear-fix/
+*/
+.u-clearfix:before,
+.u-clearfix:after {
+  content: "" !important;
+  display: table !important;
+}
+.u-clearfix:after {
+  clear: both !important;
+}
+.u-clearfix {
+  zoom: 1 !important; /* For IE 6/7 (trigger hasLayout) */
 }
