@@ -518,6 +518,8 @@ i,
 }
 
 .page--home__works-img {
+  width: 100%;
+  max-width: 3000px;
   margin: 0 auto;
 }
 
