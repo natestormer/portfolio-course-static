@@ -8,68 +8,194 @@
     <title>Works | John Singer Sargent</title>
   </head>
   <body>
-    <header>
-      <h1>
-        <img src="/img/brandmark.svg" alt="" width="90" height="97" />
-        John Singer Sargent
-      </h1>
-      <nav>
-        <h2>Menu</h2>
-        <ul>
-          <li>
-            <a href="/">Home</a>
-          </li>
-          <li>
-            <a href="/works/">Works</a>
-          </li>
-          <li>
-            <a href="/resume.html">Résumé</a>
-          </li>
-          <li>
-            <a href="/writings/">Writings</a>
-          </li>
-          <li>
-            <a href="/contact.html">Contact</a>
-          </li>
-        </ul>
-      </nav>
+    <header class="header">
+      <div class="header__layout max-width">
+        <h1 class="branding">
+          <img
+            class="branding__img"
+            src="/img/brandmark.svg"
+            alt=""
+            width="90"
+            height="97"
+          />
+          <span class="branding__text body-text strong">
+            John Singer Sargent
+          </span>
+        </h1>
+        <nav>
+          <h2 class="u-hidden-visually">Menu</h2>
+          <div class="nav-main">
+            <ul class="nav-main__list">
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/">Home</a>
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link nav-main__link--current" href="/works"
+                  >Works</a
+                >
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/resume.html">Résumé</a>
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/writings">Writings</a>
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /end .max-width -->
     </header>
-    <article>
-      <h1 class="title1">Selected Works</h1>
-      <p>A few of my favorites.</p>
-      <ol>
-        <li>
-          <a href="/works/portrait-of-madame-x.html">
-            <article>
+    <article class="max-width page page--works">
+      <div class="intro">
+        <h1 class="title1">Selected Works</h1>
+        <p class="intro__subtitle">A few of my favorites.</p>
+      </div>
+      <ol class="page--works__list">
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
               <img
-                src="/img/portrait-of-madame-x-landscape.jpg"
-                alt="Portrait of Madame X"
-                width="515"
+                alt=""
+                class="media-figure__img"
                 height="380"
+                src="/img/portrait-of-madame-x-landscape.jpg"
+                width="515"
               />
-              <h2>Portrait of Madame X</h2>
-              <strong>Oil on Canvas</strong>
+              <div class="media-figure__caption">
+                <h2>Portrait of Madame X</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
+              <img
+                alt=""
+                class="media-figure__img"
+                height="380"
+                src="/img/lady-agnew-of-lochnaw-landscape.jpg"
+                width="515"
+              />
+              <div class="media-figure__caption">
+                <h2>Lady Agnew of Lochnaw</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
+              <img
+                alt=""
+                class="media-figure__img"
+                height="380"
+                src="/img/el-jaleo-landscape.jpg"
+                width="515"
+              />
+              <div class="media-figure__caption">
+                <h2>El Jaleo</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
+              <img
+                alt=""
+                class="media-figure__img"
+                height="380"
+                src="/img/street-in-venice-landscape.jpg"
+                width="515"
+              />
+              <div class="media-figure__caption">
+                <h2>Street in Venic</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
+              <img
+                alt=""
+                class="media-figure__img"
+                height="380"
+                src="/img/cafe-on-the-riva-degli-schiavoni-landscape.jpg"
+                width="515"
+              />
+              <div class="media-figure__caption">
+                <h2>Cafe on the Riva Degli Schiavoni</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
+            </article>
+          </a>
+        </li>
+        <li class="page--works__list__item">
+          <a
+            class="u-link-underline-reverse"
+            href="/works/portrait-of-madame-x.html"
+          >
+            <article class="media-figure">
+              <img
+                alt=""
+                class="media-figure__img"
+                height="380"
+                src="/img/bridge-of-sighs-landscape.jpg"
+                width="515"
+              />
+              <div class="media-figure__caption">
+                <h2>Bridge of Sighs</h2>
+                <strong>Oil on Canvas</strong>
+              </div>
             </article>
           </a>
         </li>
       </ol>
     </article>
-    <footer>
-      <p>&copy; 2021 johnsingersargent.com</p>
-      <ul>
-        <li>
-          <a href="#">LinkedIn</a>
-        </li>
-        <li>
-          <a href="#">Dribbble</a>
-        </li>
-        <li>
-          <a href="#">GitHub</a>
-        </li>
-        <li>
-          <a href="#">Twitter</a>
-        </li>
-      </ul>
-    </footer>
+    <div class="max-width">
+      <footer class="footer">
+        <p>&copy; 2021 johnsingersargent.com</p>
+        <ul class="footer__social">
+          <li>
+            <a class="footer__social__link" href="#">LinkedIn</a>
+          </li>
+          <li>
+            <a class="footer__social__link" href="#">Dribbble</a>
+          </li>
+          <li>
+            <a class="footer__social__link" href="#">GitHub</a>
+          </li>
+          <li>
+            <a class="footer__social__link" href="#">Twitter</a>
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <!-- /end .max-width-->
   </body>
 </html>

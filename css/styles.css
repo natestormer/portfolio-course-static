@@ -431,6 +431,35 @@ i,
 }
 
 /***
+// Media Figure
+***/
+.media-figure {
+  position: relative;
+}
+
+.media-figure__img {
+  width: 100%;
+  max-width: none;
+}
+
+.media-figure__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  padding: 16px 16px 16px 32px;
+  font-size: 0.75rem; /* 12px */
+  line-height: 1.125rem; /* 18px */
+  background: var(--bg-secondary-color);
+}
+
+@media all and (min-width: 1024px) {
+  .media-figure__caption {
+    width: 50%;
+  }
+}
+
+/***
 // Page intro
 ***/
 .intro {
@@ -440,6 +469,18 @@ i,
 @media all and (min-width: 1024px) {
   .intro {
     padding: 3rem 0; /* 48px 0 */
+  }
+}
+
+.intro__subtitle {
+  margin-top: 1rem; /* 16px */
+  font-weight: bold;
+}
+
+@media all and (min-width: 1024px) {
+  .intro__subtitle {
+    font-size: 1.5rem; /* 24px */
+    line-height: 2rem; /* 32px */
   }
 }
 
@@ -585,6 +626,33 @@ i,
   width: 100%;
   max-width: 3000px;
   margin: 0 auto;
+}
+
+/***
+// Works
+***/
+.page--works__list {
+  margin: 0 -1rem; /* 16px */
+}
+
+@media all and (min-width: 1024px) {
+  .page--works__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -0.5rem;
+  }
+}
+
+.page--works__list__item {
+  margin-bottom: 0.25rem; /* 4px */
+}
+
+@media all and (min-width: 1024px) {
+  .page--works__list__item {
+    flex: 1 0 50%;
+    margin: 0;
+    padding: 0.5rem; /* 8px */
+  }
 }
 
 /*****************************
