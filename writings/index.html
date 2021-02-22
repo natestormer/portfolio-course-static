@@ -7,50 +7,263 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Writings | John Singer Sargent</title>
   </head>
-  <body>
-    <header>
-      <h1>
-        <img src="/img/brandmark.svg" alt="" width="90" height="97" />
-        John Singer Sargent
-      </h1>
-      <nav>
-        <h2>Menu</h2>
-        <ul>
+  <body class="site">
+    <header class="header">
+      <div class="header__layout max-width">
+        <h1 class="branding">
+          <img
+            class="branding__img"
+            src="/img/brandmark.svg"
+            alt=""
+            width="90"
+            height="97"
+          />
+          <span class="branding__text body-text strong">
+            John Singer Sargent
+          </span>
+        </h1>
+        <nav>
+          <h2 class="u-hidden-visually">Menu</h2>
+          <div class="nav-main">
+            <ul class="nav-main__list">
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/">Home</a>
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/works">Works</a>
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/resume.html">Résumé</a>
+              </li>
+              <li class="nav-main__item">
+                <a
+                  class="nav-main__link nav-main__link--current"
+                  href="/writings"
+                  >Writings</a
+                >
+              </li>
+              <li class="nav-main__item">
+                <a class="nav-main__link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <!-- /end .max-width -->
+    </header>
+    <article class="page page--writings site__content">
+      <div class="max-width">
+        <div class="intro">
+          <h1 class="title1">Writings &amp; Rambles</h1>
+          <p class="intro__subtitle">Straight from the bottom of the bottle.</p>
+        </div>
+      </div>
+      <ol class="year-list">
+        <li class="year-list__year">
+          <section>
+            <h2 class="year-list__year__header">
+              Of the year
+              <time class="year-list__year__header__time" datetime="2021"
+                >2021</time
+              >
+            </h2>
+            <ol
+              class="max-width max-width--no-edge year-list__year__content card-grid"
+            >
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 01 </span>
+                      <img
+                        alt=""
+                        class="card__media"
+                        src="/img/monet-soleil-levant-landscape.jpg"
+                        width="514"
+                        height="282"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        class="caption-text"
+                        datetime="2021-02-04"
+                        >Feb 04 2021</time
+                      >
+                      <h3 class="card__title">
+                        My Take on the Impressionists &amp; Their Strokes
+                      </h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 02 </span>
+                      <img
+                        alt="Velazques, Las Meninas - Painting"
+                        class="card__media"
+                        height="282"
+                        src="/img/velazques-las-meninas-landscape.jpg"
+                        width="514"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        datetime="2021-01-22"
+                        >Jan 22 2021</time
+                      >
+                      <h3 class="card__title">
+                        Master Study: Diego Velázquez &amp; Tenebrism
+                      </h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ol>
+          </section>
+        </li>
+        <li class="year-list__year">
+          <section>
+            <h2 class="year-list__year__header">
+              Of the year
+              <time class="year-list__year__header__time" datetime="2021"
+                >2020</time
+              >
+            </h2>
+            <ol
+              class="max-width max-width--no-edge year-list__year__content card-grid"
+            >
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 03 </span>
+                      <img
+                        alt="Rodin, Gates of Hell - Sculpture"
+                        class="card__media"
+                        height="282"
+                        src="/img/rodin-gates-of-hell-landscape.jpg"
+                        width="514"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        datetime="2020-12-01"
+                        >Dec 01 2020</time
+                      >
+                      <h3 class="card__title">
+                        Auguste René Rodin, The Modern Sculptor
+                      </h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 04 </span>
+                      <img
+                        alt="Winslow, Homer Rowing Home - Painting"
+                        class="card__media"
+                        height="282"
+                        src="/img/winslow-homer-rowing-home-landscape.jpg"
+                        width="514"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        datetime="2020-11-23"
+                        >Nov 23 2020</time
+                      >
+                      <h3 class="card__title">
+                        Work Quickly, Work Wet - Alla Prima
+                      </h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 05 </span>
+                      <img
+                        alt="Interior of Paris Salon Gallery - Photo"
+                        class="card__media"
+                        height="282"
+                        src="/img/paris-salon-landscape.jpg"
+                        width="514"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        datetime="2020-10-15"
+                        >Oct 15 2020</time
+                      >
+                      <h3 class="card__title">The Great Event: Paris Salon</h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+              <li class="card-grid__item">
+                <a class="u-link-underline-reverse" href="#">
+                  <article class="card card--flat">
+                    <div class="card__media-container">
+                      <span class="card__counter"> 06 </span>
+                      <img
+                        alt="Tintoretto, The Last Supper - Painting"
+                        class="card__media"
+                        height="282"
+                        src="/img/tinteretto-last-supper-landscape.jpg"
+                        width="514"
+                      />
+                    </div>
+                    <div class="card__content card__content--no-edge">
+                      <time
+                        class="card__meta caption-text"
+                        datetime="2020-10-01"
+                        >Oct 01 2021</time
+                      >
+                      <h3 class="card__title">
+                        Master Study: Last Supper by Tintoretto
+                      </h3>
+                    </div>
+                  </article>
+                </a>
+              </li>
+            </ol>
+          </section>
+        </li>
+      </ol>
+      <!-- /end .year-list -->
+    </article>
+    <div class="max-width">
+      <footer class="footer">
+        <p>&copy; 2021 johnsingersargent.com</p>
+        <ul class="footer__social">
           <li>
-            <a href="/">Home</a>
+            <a class="footer__social__link" href="#">LinkedIn</a>
           </li>
           <li>
-            <a href="/works">Works</a>
+            <a class="footer__social__link" href="#">Dribbble</a>
           </li>
           <li>
-            <a href="/resume.html">Résumé</a>
+            <a class="footer__social__link" href="#">GitHub</a>
           </li>
           <li>
-            <a href="/writings">Writings</a>
-          </li>
-          <li>
-            <a href="/contact.html">Contact</a>
+            <a class="footer__social__link" href="#">Twitter</a>
           </li>
         </ul>
-      </nav>
-    </header>
-    <h1>Writings</h1>
-    <footer>
-      <p>&copy; 2021 johnsingersargent.com</p>
-      <ul>
-        <li>
-          <a href="#">LinkedIn</a>
-        </li>
-        <li>
-          <a href="#">Dribbble</a>
-        </li>
-        <li>
-          <a href="#">GitHub</a>
-        </li>
-        <li>
-          <a href="#">Twitter</a>
-        </li>
-      </ul>
-    </footer>
+      </footer>
+    </div>
+    <!-- /end .max-width-->
   </body>
 </html>

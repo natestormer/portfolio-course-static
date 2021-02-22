@@ -26,6 +26,10 @@
 
   /* Define stylistic properties */
   --shadow: 0px 4px 16px 8px rgba(31, 37, 37, 0.15);
+
+  /* Layout units */
+  --m-edge-spacing: 1rem; /* 16px */
+  --st-edge-spacing: 3rem; /* 48px */
 }
 
 html,
@@ -44,7 +48,9 @@ body {
   Set all box sizing width/heights 
   to account for border and padding
 */
-* {
+*,
+::before,
+::after {
   box-sizing: border-box;
 }
 
@@ -232,12 +238,27 @@ i,
   width: 100%;
   max-width: 71.25rem; /* 1140px */
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 var(--m-edge-spacing);
 }
 
 @media all and (min-width: 1024px) {
   .max-width {
-    padding: 0 3rem;
+    padding: 0 var(--st-edge-spacing);
+  }
+}
+
+.max-width--full {
+  max-width: 100%;
+}
+
+/* Modifier to collapse edge spacing */
+.max-width--no-edge {
+  padding: 0;
+}
+
+@media all and (min-width: 1024px) {
+  .max-width--no-edge {
+    padding: 0 var(--st-edge-spacing);
   }
 }
 
@@ -419,9 +440,16 @@ i,
 // Cards
 ***/
 .card {
+  position: relative;
   background: var(--bg-main-color);
   border: 1px solid var(--bg-secondary-color);
   box-shadow: var(--shadow);
+}
+
+/* Modifier to remove border and shadow */
+.card--flat {
+  border: none;
+  box-shadow: none;
 }
 
 .card__media {
@@ -430,8 +458,24 @@ i,
   margin-bottom: 1.5rem; /* 24px */
 }
 
+/* container wrapping media section */
+.card__media-container {
+  position: relative;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.card__media-container .card__media {
+  margin-bottom: 0;
+}
+
 .card__content {
   padding: 1.5rem; /* 24px */
+}
+
+/* Modifier to remove left and right edge padding */
+.card__content--no-edge {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 .card__meta {
@@ -442,6 +486,54 @@ i,
 .card__title {
   font-weight: bold;
   font-size: 1.5rem; /* 24px */
+}
+
+.card__counter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 4.5rem; /* 72px */
+  height: 4.5rem; /* 72px */
+  margin: -0.5rem 0 0 -0.5rem;
+  padding: 0.5rem; /* 8px */
+  text-align: right;
+  font-weight: bold;
+  font-size: 2rem; /* 32px */
+  line-height: 1;
+  color: var(--bg-main-color);
+  background: var(--font-color);
+}
+
+@media all and (min-width: 1024px) {
+  .card__counter {
+    top: 38%;
+    margin-left: -0.75rem;
+  }
+}
+
+/***
+// Card Grid
+// Default 2col layout
+***/
+@media all and (min-width: 1024px) {
+  .card-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem; /* 16px */
+  }
+}
+
+.card-grid__item {
+  margin: 0 0 1rem 0; /* 0 0 16px 0 */
+}
+
+@media all and (min-width: 1024px) {
+  .card-grid__item {
+    flex: 0 0 calc(50% - 1rem);
+  }
 }
 
 /***
@@ -470,6 +562,67 @@ i,
 @media all and (min-width: 1024px) {
   .media-figure__caption {
     width: 50%;
+  }
+}
+
+/***
+// Year list
+// Ex: /news/
+***/
+.year-list {
+  max-width: 125rem; /* 2000px */
+  margin: 0 auto;
+  padding-left: var(--m-edge-spacing);
+}
+
+@media all and (min-width: 1024px) {
+  .year-list {
+    padding-left: var(--st-edge-spacing);
+  }
+}
+
+.year-list__year {
+  padding: 1rem 0; /* 16px 0 */
+  border-top: 0.25rem solid var(--font-color); /* 4px */
+}
+
+@media all and (min-width: 1024px) {
+  .year-list__year {
+    padding: 1.5rem 0; /* 24px 0 */
+    border-top-width: 0.5rem; /* 8px */
+  }
+}
+
+.year-list__year__header {
+  font-weight: bold;
+}
+
+.year-list__year__header__time {
+  display: block;
+  margin-top: 0.5rem; /* 8px */
+  font-size: 2rem; /* 32px */
+  line-height: 1;
+}
+
+@media all and (min-width: 1024px) {
+  .year-list__year__header__time {
+    font-size: 3.5rem; /* 56px */
+  }
+}
+
+.year-list__year__content {
+  padding-top: 1.5rem; /* 24px 0 */
+  padding-right: var(--m-edge-spacing);
+  padding-bottom: 1.5rem; /* 24px 0 */
+}
+
+@media all and (min-width: 1024px) {
+  .year-list__year__content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 2rem;
+    padding-right: var(--st-edge-spacing);
   }
 }
 
