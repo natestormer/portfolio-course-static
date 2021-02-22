@@ -242,6 +242,20 @@ i,
 }
 
 /***
+// Site Component
+// Sticky footer and content layout
+***/
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site__content {
+  flex: 1;
+}
+
+/***
 // Nav Main
 ***/
 .nav-main {
