@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Positioning</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 300vh;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Positioning</h2>
+    <style>
+      .posEx {
+        position: relative;
+        padding: 1em;
+        color: white;
+        background-color: rebeccapurple;
+      }
+
+      .posEx__child {
+        padding: 1em;
+      }
+
+      .posEx__child:nth-child(1) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 2rem;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: coral;
+      }
+
+      .posEx__child:nth-child(2) {
+        background-color: cornflowerblue;
+      }
+
+      .posEx__child:nth-child(3) {
+        position: relative;
+        top: 10px;
+        left: 10px;
+        background-color: palevioletred;
+      }
+    </style>
+    <div class="posEx">
+      <div class="posEx__child">Item 1</div>
+      <div class="posEx__child">Item 2</div>
+      <div class="posEx__child">Item 3</div>
+    </div>
+
+    <style>
+      /* Z-index example */
+      .zIndEx {
+        position: relative;
+        width: 500px;
+        height: 500px;
+        margin: 3rem 0;
+        background: rgb(43, 43, 43);
+      }
+
+      .zIndEx__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+      }
+
+      .zIndEx__item:nth-child(1) {
+        z-index: 3;
+        width: 20%;
+        height: 20%;
+        background: #ccc;
+      }
+
+      .zIndEx__item:nth-child(2) {
+        z-index: 2;
+        width: 40%;
+        height: 40%;
+        background: rgb(130, 130, 130);
+      }
+
+      .zIndEx__item:nth-child(3) {
+        z-index: 1;
+        width: 70%;
+        height: 70%;
+        background: rgb(72, 72, 72);
+      }
+
+      /* Hover animation */
+      .zIndEx {
+        transform: perspective(1200px) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+        transform-style: preserve-3d;
+        transition: all 1500ms ease-in-out 300ms;
+      }
+
+      .zIndEx:hover {
+        transform: perspective(1200px) rotateX(30deg) rotateY(50deg)
+          rotateZ(0deg);
+      }
+
+      .zIndEx__item {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0);
+        transform: perspective(1200px) translateX(-50%) translateY(-50%)
+          translateZ(0);
+        transform-style: preserve-3d;
+        transition: all 1500ms ease-in-out 300ms, box-shadow 500ms ease;
+      }
+
+      .zIndEx:hover .zIndEx__item {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6);
+      }
+
+      .zIndEx:hover .zIndEx__item:nth-child(1) {
+        transform: perspective(1200px) translateX(-50%) translateY(-50%)
+          translateZ(200px);
+      }
+
+      .zIndEx:hover .zIndEx__item:nth-child(2) {
+        transform: perspective(1200px) translateX(-50%) translateY(-50%)
+          translateZ(150px);
+      }
+
+      .zIndEx:hover .zIndEx__item:nth-child(3) {
+        transform: perspective(1200px) translateX(-50%) translateY(-50%)
+          translateZ(100px);
+      }
+    </style>
+
+    <div class="zIndEx">
+      <div class="zIndEx__item">Index 1</div>
+      <div class="zIndEx__item">Index 2</div>
+      <div class="zIndEx__item">Index 3</div>
+    </div>
+
+    <style>
+      /* Position sticky */
+      .posStickyEx {
+        position: relative;
+        margin: 5rem 0;
+        max-width: 500px;
+        max-height: 300px;
+        overflow: hidden;
+        overflow-y: auto;
+        border: 1px solid darkslategrey;
+      }
+
+      .posStickyEx dt {
+        position: sticky;
+        top: 0;
+        padding: 0.5rem 1rem;
+        background-color: gray;
+      }
+
+      .posStickyEx dd {
+        padding: 2rem;
+        margin: 0;
+      }
+    </style>
+    <dl class="posStickyEx">
+      <dt>Title 1</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+      <dt>Title 2</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+      <dt>Title 3</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+      <dt>Title 4</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+      <dt>Title 5</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+      <dt>Title 6</dt>
+      <dd>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vel
+        porta felis, vitae fermentum lacus. Curabitur dolor tellus, varius id
+        est in, bibendum auctor felis. Aenean et mi cursus, pellentesque eros
+        eu, sollicitudin dui. Nam vel augue lobortis, egestas justo quis,
+        interdum leo. Quisque dapibus metus arcu, quis scelerisque dolor
+        vulputate ut. Donec a neque vel dolor volutpat accumsan sit amet sed
+        lorem. Donec non neque arcu. Nunc non dapibus lectus, ut facilisis
+        velit. Nullam non turpis magna. Nunc fermentum placerat tortor nec
+        dignissim. Mauris in facilisis nisi. Morbi vel leo sodales, ultrices
+        lectus in, molestie mauris. Nam at blandit dui.
+      </dd>
+    </dl>
+
+    <style>
+      .posFxEx {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 5rem;
+        height: 5rem;
+        margin: 1rem;
+        color: white;
+        background: palevioletred;
+        border: 1px solid mediumvioletred;
+        border-radius: 50%;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+    </style>
+    <div class="posFxEx">
+      <div class="posFxEx__inner">Fixed</div>
+    </div>
+  </body>
+</html>
