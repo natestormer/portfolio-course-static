@@ -65,3 +65,7 @@ Branch: [module-5-BEM-methodology](https://github.com/natestormer/portfolio-cour
 #### Module 6 - CSS Layout Part 1 - Flexbox
 
 Branch: [module-6-css-flexbox-layout](https://github.com/natestormer/portfolio-course-static/tree/module-6-css-flexbox-layout)
+
+#### Module 7 - CSS Layout Part 1 - Positioning
+
+Branch: [module-6-css-positioning-layout](https://github.com/natestormer/portfolio-course-static/tree/module-7-css-positioning-layout)
