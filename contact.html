@@ -52,19 +52,19 @@
       <!-- /end .max-width -->
     </header>
     <article class="max-width page page--contact site__content">
-      <div class="intro">
+      <div class="intro page--contact__intro">
         <h1 class="title1">Let's Talk</h1>
-        <p class="intro__subtitle">
+        <p class="strong body-textintro page--contact__intro__subtitle">
           Commissions, speaking engagements, or just say hi...
         </p>
-        <ul>
-          <li>
+        <ul class="intro page--contact__intro__contact-list">
+          <li class="page--contact__intro__contact-list__item">
             <a href="tel:12344567">
               <strong>Tel:</strong>
               <span>1 (234) 4567</span>
             </a>
           </li>
-          <li>
+          <li class="page--contact__intro__contact-list__item">
             <a href="mailto:hello@jssargent.com">
               <strong>Email:</strong>
               <span>hello@jssargent.com</span>
@@ -72,45 +72,89 @@
           </li>
         </ul>
       </div>
-      <form name="contact" method="POST" action="/success.html" data-netlify>
-        <label for="name">
-          Name
+      <form
+        class="page--contact__form"
+        name="contact"
+        method="POST"
+        action="/success.html"
+        data-netlify
+      >
+        <label
+          class="page--contact__form__input-group page--contact__form__input-group--2col input-group input-group--required"
+          for="name"
+        >
+          <span class="input-group__label">Name</span>
           <input
             id="name"
+            class="input-group__input"
             name="name"
             placeholder="Victoria Doe"
             required
             type="text"
           />
         </label>
-        <label for="email">
-          Email
+        <label
+          class="page--contact__form__input-group page--contact__form__input-group--2col input-group input-group--required"
+          for="email"
+        >
+          <span class="input-group__label">Email</span>
           <input
             id="email"
+            class="input-group__input"
             name="email"
             placeholder="example@domain.com"
             required
             type="email"
           />
         </label>
-        <label for="tel">
-          Telephone
-          <input id="tel" name="telephone" type="tel" />
+        <label
+          class="page--contact__form__input-group page--contact__form__input-group--2col input-group"
+          for="tel"
+        >
+          <span class="input-group__label">Telephone</span>
+          <input
+            class="input-group__input"
+            id="tel"
+            name="telephone"
+            type="tel"
+          />
         </label>
-        <label for="interest">
-          Interested In
-          <select name="interest" id="interest">
+        <label
+          class="page--contact__form__input-group page--contact__form__input-group--2col input-group"
+          for="interest"
+        >
+          <span class="input-group__label">Interested In</span>
+          <select
+            class="input-group__input input-group__input--select"
+            name="interest"
+            id="interest"
+          >
+            <option value=""></option>
             <option value="portraits">Portrait Painting</option>
             <option value="landscapes">Landscape Painting</option>
             <option value="murals">Murals</option>
             <option value="other">Other</option>
           </select>
         </label>
-        <label for="message">
-          Message
-          <textarea id="message" name="message"></textarea>
+        <label
+          class="page--contact__form__input-group input-group"
+          for="message"
+        >
+          <span class="input-group__label">Message</span>
+          <textarea
+            class="input-group__input input-group__input--textarea"
+            id="message"
+            name="message"
+          ></textarea>
         </label>
-        <button type="submit">Send</button>
+        <div class="page--contact__form__input-group">
+          <button
+            class="button page--contact__form__input-group__submit"
+            type="submit"
+          >
+            Send
+          </button>
+        </div>
       </form>
     </article>
     <div class="max-width">
