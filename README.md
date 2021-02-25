@@ -68,4 +68,8 @@ Branch: [module-6-css-flexbox-layout](https://github.com/natestormer/portfolio-c
 
 #### Module 7 - CSS Layout Part 1 - Positioning
 
-Branch: [module-6-css-positioning-layout](https://github.com/natestormer/portfolio-course-static/tree/module-7-css-positioning-layout)
+Branch: [module-7-css-positioning-layout](https://github.com/natestormer/portfolio-course-static/tree/module-7-css-positioning-layout)
+
+#### Module 8 - Forms
+
+Branch: [module-8-forms](https://github.com/natestormer/portfolio-course-static/tree/module-8-forms)
