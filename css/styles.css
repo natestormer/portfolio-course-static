@@ -953,6 +953,58 @@ i,
   margin-top: 2rem; /* 32px (48px - 16px margin) */
 }
 
+/***
+// Success
+***/
+.page--contact-success {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.page--contact-success__content {
+  padding: 2rem;
+  text-align: center;
+  width: 100%;
+  color: var(--bg-main-color);
+  background: var(--font-color);
+}
+
+@media all and (min-width: 1024px) {
+  .page--contact-success__content {
+    width: 65%;
+    padding: 4rem;
+  }
+}
+
+@supports (aspect-ratio: 1/1) {
+  .page--contact-success__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+  }
+}
+
+.page--contact-success__content a {
+  color: var(--bg-main-color);
+}
+
+.page--contact-success__content__title1 {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.page--contact-success__content__subtitle {
+  margin-bottom: 1rem;
+}
+
+.page--contact-success__content__p {
+  max-width: 30ch;
+}
+
 /*****************************
  *****************************
 //
