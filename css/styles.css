@@ -142,6 +142,7 @@ img {
 
 /* Body Text */
 .body-text {
+  margin-bottom: 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
 }
@@ -438,6 +439,10 @@ i,
   border-color: transparent;
 }
 
+.button--block {
+  display: block;
+}
+
 /***
 // Input Group component
 // Label, input, required, etc.
@@ -627,6 +632,20 @@ i,
 }
 
 /***
+// Inline Definition List
+***/
+.inline-dl__title {
+  float: left;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.inline-dl__description {
+  clear: right;
+  margin-bottom: 0.5rem;
+}
+
+/***
 // Year list
 // Ex: /news/
 ***/
@@ -688,6 +707,40 @@ i,
 }
 
 /***
+// Page nav
+***/
+.page-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.page-nav__item:first-child {
+  margin-right: auto;
+}
+
+.page-nav__item:last-child {
+  margin-left: 1rem;
+}
+
+.page-nav__link {
+  display: inline-block;
+  padding: 1rem 0;
+}
+
+.page-nav__link--prev::before {
+  content: "<-";
+  display: inline-block;
+  margin-right: 0.25rem;
+}
+
+.page-nav__link--next::after {
+  content: "->";
+  display: inline-block;
+  margin-left: 0.25rem;
+}
+
+/***
 // Page intro
 ***/
 .intro {
@@ -710,6 +763,10 @@ i,
     font-size: 1.5rem; /* 24px */
     line-height: 2rem; /* 32px */
   }
+}
+
+.intro__page-nav {
+  margin-top: 1.5rem; /* 24px */
 }
 
 /***
@@ -751,6 +808,13 @@ i,
 
 .bio__content p {
   margin-bottom: 1.5rem; /* 24px */
+}
+
+/***
+// Contact CTA
+***/
+.contact-cta__title {
+  margin-bottom: 1rem;
 }
 
 /***
@@ -884,6 +948,121 @@ i,
 }
 
 /***
+// Work - Portfolio Entry Template
+***/
+.page--work {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Default, portrait grid */
+@media all and (min-width: 1024px) {
+  .page--work {
+    display: grid;
+    grid-template:
+      "intro intro" auto
+      "feature about" auto
+      "feature details" 1fr
+      "feature cta" auto / calc(66.666% - 1rem) 33.333%;
+    gap: 1rem;
+  }
+}
+
+/* Landscape grid */
+@media all and (min-width: 1024px) {
+  .page--work--landscape {
+    display: grid;
+    grid-template:
+      "intro intro intro" auto
+      "feature feature feature" auto
+      "about about details" auto
+      "about about cta" auto / 33.333% calc(33.333% - 2rem) 33.333%;
+    gap: 1rem;
+  }
+}
+
+.page--work__intro {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__intro {
+    grid-area: intro;
+    padding: 3rem 0 0; /* 48px 0  0*/
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__page-nav {
+    width: calc(66.666% - 1rem); /* same as feature grid area */
+  }
+
+  /* override width for landscape grid */
+  .page--work--landscape .page--work__page-nav {
+    width: 100%;
+  }
+}
+
+.page--work__feature {
+  order: -1;
+  margin-right: -1rem;
+  margin-left: -1rem;
+}
+.page--work__feature img {
+  display: block;
+  width: 100%;
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__feature {
+    order: 0; /* or `unset` */
+    grid-area: feature;
+    margin: 0;
+  }
+
+  .page--work--landscape .page--work__feature {
+    margin-bottom: 2rem;
+  }
+}
+
+.page--work__about {
+  margin-bottom: 3rem; /* 48px */
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__about {
+    grid-area: about;
+  }
+
+  .page--work--landscape .page--work__about__columns {
+    columns: 2 auto;
+    column-gap: 2rem;
+  }
+}
+
+.page--work__details {
+  margin-bottom: 3rem; /* 48px */
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__details {
+    grid-area: details;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .page--work__cta {
+    grid-area: cta;
+    align-self: end;
+  }
+}
+
+.page--work__title {
+  margin-bottom: 2rem; /* 32px */
+}
+
+/***
 // Contact
 ***/
 @media all and (min-width: 1090px) {
@@ -891,6 +1070,10 @@ i,
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .page--work--landscape .page--contact {
+    align-self: top;
   }
 }
 
@@ -1195,6 +1378,10 @@ i,
 
 .u-link-underline-reverse:hover {
   text-decoration: underline !important;
+}
+
+.u-text-upper {
+  text-transform: uppercase !important;
 }
 
 /* Completely remove from the flow but leave available to screen readers. */
