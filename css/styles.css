@@ -29,7 +29,12 @@
 
   /* Layout units */
   --m-edge-spacing: 1rem; /* 16px */
+  --m-edge-spacing-neg: -1rem;
+  /* larger smart phones */
+  --ml-edge-spaceing: 2rem; /* 32px */
+  --ml-edge-spaceing-neg: -2rem;
   --st-edge-spacing: 3rem; /* 48px */
+  --st-edge-spacing-neg: -3rem;
 }
 
 html,
@@ -179,6 +184,22 @@ i,
   font-style: italic;
 }
 
+sub,
+sup {
+  position: relative;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+
+sub {
+  bottom: 0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
 /*****************************
  *****************************
 //
@@ -186,6 +207,20 @@ i,
 //
 *****************************
 *****************************/
+
+/***
+// Lists
+***/
+.ol li {
+  list-style-type: decimal;
+  margin-left: var(--m-edge-spacing);
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.ol li:last-child {
+  margin-bottom: 0;
+}
 
 /***
 // Header Component
@@ -240,6 +275,12 @@ i,
   max-width: 71.25rem; /* 1140px */
   margin: 0 auto;
   padding: 0 var(--m-edge-spacing);
+}
+
+@media all and (min-width: 375px) {
+  .max-width {
+    padding: 0 var(--ml-edge-spaceing);
+  }
 }
 
 @media all and (min-width: 1024px) {
@@ -492,6 +533,17 @@ i,
   font-size: 1rem;
   line-height: 1.5rem;
   font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+/***
+// Fig - Figure with img and figcaption
+***/
+.fig__img {
+  display: block;
+}
+
+.fig__caption {
+  padding: 0.5rem 0;
 }
 
 /***
@@ -1364,6 +1416,165 @@ i,
   font-weight: normal;
 }
 
+/***
+// Writing Article Template
+***/
+
+/* Grid layout */
+@media (min-width: 1024px) {
+  .page--writing {
+    display: grid;
+    grid-template:
+      "header header" auto
+      "body aside" auto
+      "footer footer" auto / calc(58.33333333% - 8.333% + 2rem) 33.333%;
+    gap: 0 calc(8.333% + 2rem);
+  }
+
+  .page--writing__intro {
+    grid-area: header;
+  }
+
+  .page--writing__body {
+    grid-area: body;
+  }
+
+  .page--writing__aside {
+    grid-area: aside;
+  }
+
+  .page--writing__footer {
+    grid-area: footer;
+  }
+}
+
+.page--writing__intro__title {
+  margin-bottom: 1rem;
+}
+
+.page--writing__intro__published {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .page--writing__intro__published {
+    margin-bottom: 2rem;
+  }
+}
+
+.page--writing__intro__feature {
+  display: block;
+  margin: 0 var(--m-edge-spaceing-neg);
+}
+
+@media (min-width: 375px) {
+  .page--writing__intro__feature {
+    margin: 0 var(--ml-edge-spaceing-neg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page--writing__intro__feature {
+    margin: 0;
+  }
+}
+
+.page--writing__body {
+  margin-bottom: 3rem;
+}
+
+.page--writing__body p,
+.page--writing__body .body-text {
+  margin-bottom: 1.5rem;
+}
+
+.page--writing__body figure,
+.page--writing__body .fig {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.page--writing__body h2,
+.page--writing__body .title2,
+.page--writing__body h3,
+.page--writing__body .title3,
+.page--writing__body h4,
+.page--writing__body .title4 {
+  margin-bottom: 2rem;
+}
+
+.page--writing__subsection-title {
+  margin-bottom: 2rem;
+}
+
+.page--writing__aside {
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 1024px) {
+  .page--writing__aside .page--writing__subsection-title {
+    margin-bottom: 1rem;
+  }
+}
+
+.page--writing__related {
+  display: flex;
+  margin: 0 var(--m-edge-spacing-neg);
+  padding: 1rem 0 2rem;
+  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (min-width: 375px) {
+  .page--writing__related {
+    margin: 0 var(--ml-edge-spaceing-neg);
+  }
+}
+
+@media (min-width: 1024px) {
+  .page--writing__related {
+    display: block;
+    overflow: visible;
+    overflow-x: visible;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.page--writing__related__item {
+  flex: 0 0 90%;
+  padding: 0 1rem;
+}
+
+@media (min-width: 1024px) {
+  .page--writing__related__item {
+    flex: unset;
+    padding: 0 0 1.5rem;
+  }
+}
+
+.page--writing__related__item__link {
+  display: block;
+  height: 100%;
+}
+
+.page--writing__related__item__card {
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .page--writing__footer__notelist {
+    columns: 2 auto;
+    column-gap: 2rem;
+  }
+
+  .page--writing__footer__notelist > li {
+    break-inside: avoid-column;
+  }
+}
+
 /*****************************
  *****************************
 //
@@ -1378,6 +1589,10 @@ i,
 
 .u-link-underline-reverse:hover {
   text-decoration: underline !important;
+}
+
+.u-text-underline {
+  text-decoration: underline;
 }
 
 .u-text-upper {
