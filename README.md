@@ -1,5 +1,9 @@
 ## Let’s Build a Portfolio Site Course
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/d2b39255-f5f2-4570-ab79-7a3a09b2ed5c/deploy-status)](https://app.netlify.com/sites/portfolio-course-static/deploys)
+
+🚀 [Production Site](https://portfolio-course-static.netlify.app/)
+
 ### Overview and Goal
 
 The computer screen is a fantastic canvas with close to limitless possibilities. It can present beautiful designs that shift, animate, and morph to our desires and choices. However, to truly unlock the power of experience design, we must venture into the realm of logic and code.
