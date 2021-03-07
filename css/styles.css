@@ -223,6 +223,20 @@ sup {
 }
 
 /***
+// Inline Definition List
+***/
+.inline-dl__title {
+  float: left;
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.inline-dl__description {
+  clear: right;
+  margin-bottom: 0.5rem;
+}
+
+/***
 // Header Component
 ***/
 .header {
@@ -265,57 +279,6 @@ sup {
   .branding__text {
     display: inline;
   }
-}
-
-/***
-// Content Max Width Wrapper
-***/
-.max-width {
-  width: 100%;
-  max-width: 71.25rem; /* 1140px */
-  margin: 0 auto;
-  padding: 0 var(--m-edge-spacing);
-}
-
-@media all and (min-width: 375px) {
-  .max-width {
-    padding: 0 var(--ml-edge-spacing);
-  }
-}
-
-@media all and (min-width: 1024px) {
-  .max-width {
-    padding: 0 var(--st-edge-spacing);
-  }
-}
-
-.max-width--full {
-  max-width: 100%;
-}
-
-/* Modifier to collapse edge spacing */
-.max-width--no-edge {
-  padding: 0;
-}
-
-@media all and (min-width: 1024px) {
-  .max-width--no-edge {
-    padding: 0 var(--st-edge-spacing);
-  }
-}
-
-/***
-// Site Component
-// Sticky footer and content layout
-***/
-.site {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.site__content {
-  flex: 1;
 }
 
 /***
@@ -443,6 +406,57 @@ sup {
 .footer__social__link {
   display: block;
   padding: 1rem 0.5rem; /* 16px 8px */
+}
+
+/***
+// Site Component
+// Sticky footer and content layout
+***/
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site__content {
+  flex: 1;
+}
+
+/***
+// Content Max Width Wrapper
+***/
+.max-width {
+  width: 100%;
+  max-width: 71.25rem; /* 1140px */
+  margin: 0 auto;
+  padding: 0 var(--m-edge-spacing);
+}
+
+@media all and (min-width: 375px) {
+  .max-width {
+    padding: 0 var(--ml-edge-spacing);
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .max-width {
+    padding: 0 var(--st-edge-spacing);
+  }
+}
+
+.max-width--full {
+  max-width: 100%;
+}
+
+/* Modifier to collapse edge spacing */
+.max-width--no-edge {
+  padding: 0;
+}
+
+@media all and (min-width: 1024px) {
+  .max-width--no-edge {
+    padding: 0 var(--st-edge-spacing);
+  }
 }
 
 /***
@@ -681,20 +695,6 @@ sup {
   .media-figure__caption {
     width: 50%;
   }
-}
-
-/***
-// Inline Definition List
-***/
-.inline-dl__title {
-  float: left;
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-.inline-dl__description {
-  clear: right;
-  margin-bottom: 0.5rem;
 }
 
 /***
