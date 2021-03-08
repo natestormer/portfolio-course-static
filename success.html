@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Thank You | John Singer Sargent</title>
   </head>
-  <body class="site">
+  <body class="site no-js">
     <header class="header">
       <div class="header__layout max-width">
         <h1 class="branding">
@@ -22,8 +22,22 @@
             John Singer Sargent
           </span>
         </h1>
-        <nav>
+        <nav class="header__nav">
           <h2 class="u-hidden-visually">Menu</h2>
+          <button
+            class="header__nav__hamburger hamburger js-hamburger"
+            type="button"
+          >
+            <span class="hamburger__layout">
+              <span class="hamburger__inner">
+                <span class="u-hidden-visually">Show Navigation</span>
+              </span>
+            </span>
+          </button>
+          <label for="theme-input">
+            Darkmode
+            <input type="checkbox" name="theme-input" id="theme-input" />
+          </label>
           <div class="nav-main">
             <ul class="nav-main__list">
               <li class="nav-main__item">
@@ -70,7 +84,11 @@
     </article>
     <div class="max-width">
       <footer class="footer">
-        <p>&copy; 2021 johnsingersargent.com</p>
+        <p>
+          &copy;
+          <time datetime="1882" class="js-current-year">1882</time>
+          johnsingersargent.com
+        </p>
         <ul class="footer__social">
           <li>
             <a class="footer__social__link" href="#">LinkedIn</a>
@@ -88,5 +106,6 @@
       </footer>
     </div>
     <!-- /end .max-width-->
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

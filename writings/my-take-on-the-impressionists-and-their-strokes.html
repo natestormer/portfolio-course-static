@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -33,13 +33,20 @@
         </h1>
         <nav class="header__nav">
           <h2 class="u-hidden-visually">Menu</h2>
-          <button class="header__nav__hamburger hamburger js-hamburger">
+          <button
+            class="header__nav__hamburger hamburger js-hamburger"
+            type="button"
+          >
             <span class="hamburger__layout">
               <span class="hamburger__inner">
                 <span class="u-hidden-visually">Show Navigation</span>
               </span>
             </span>
           </button>
+          <label for="theme-input">
+            Darkmode
+            <input type="checkbox" name="theme-input" id="theme-input" />
+          </label>
           <div class="nav-main js-nav">
             <div class="nav-main__close">
               <button class="hamburger hamburger--close js-nav-close">
