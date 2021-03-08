@@ -10,7 +10,13 @@
       Sargent
     </title>
   </head>
-  <body class="site">
+  <body class="site no-js">
+    <div class="no-js__banner">
+      <p class="no-js__banner__content max-width">
+        🤔 It looks like you have JavaScript turned off. This site requires JS
+        enabled to function properly.
+      </p>
+    </div>
     <header class="header">
       <div class="header__layout max-width">
         <h1 class="branding">
@@ -25,9 +31,25 @@
             John Singer Sargent
           </span>
         </h1>
-        <nav>
+        <nav class="header__nav">
           <h2 class="u-hidden-visually">Menu</h2>
-          <div class="nav-main">
+          <button class="header__nav__hamburger hamburger js-hamburger">
+            <span class="hamburger__layout">
+              <span class="hamburger__inner">
+                <span class="u-hidden-visually">Show Navigation</span>
+              </span>
+            </span>
+          </button>
+          <div class="nav-main js-nav">
+            <div class="nav-main__close">
+              <button class="hamburger hamburger--close js-nav-close">
+                <span class="hamburger__layout">
+                  <span class="hamburger__inner">
+                    <span class="u-hidden-visually">Hide Navigation</span>
+                  </span>
+                </span>
+              </button>
+            </div>
             <ul class="nav-main__list">
               <li class="nav-main__item">
                 <a class="nav-main__link" href="/">Home</a>
@@ -314,5 +336,6 @@
       </footer>
     </div>
     <!-- /end .max-width-->
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
