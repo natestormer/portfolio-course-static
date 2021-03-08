@@ -42,12 +42,33 @@
     }
   };
 
+  // Update text with current year
+  const updateCurrentYear = () => {
+    // 1. Get all elements that need to be updated
+    const elements = document.querySelectorAll(".js-current-year");
+
+    // if we don't have any elements, skip everthing else
+    if (elements.length === 0) return;
+
+    // 2. Create a Date object for the current year
+    const currentYear = new Date().getFullYear();
+
+    // 3. Loop through each element and update inner html to current year
+    elements.forEach((element) => {
+      element.innerHTML = currentYear;
+
+      // If the element has a datetime attribute, update that as well
+      if (element.hasAttribute("datetime")) {
+        element.setAttribute("datetime", currentYear);
+      }
+    });
   };
 
   // All function initialization goes here
   const init = () => {
     testForJS();
     navToggle();
+    updateCurrentYear();
   };
 
   // Call initialization function
