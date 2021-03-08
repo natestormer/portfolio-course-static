@@ -64,11 +64,85 @@
     });
   };
 
+  // Color Theme support and theme switching - Basic Example
+  // const colorTheme = () => {
+  //   // 1. Get current theme data attribute
+  //   const documentEl = document.documentElement;
+  //   const currentTheme = documentEl.getAttribute("data-theme");
+
+  //   // 2. Get toggle button
+  //   const toggleBtn = document.getElementById("theme-input");
+
+  //   // 3. Function to handle toggle event
+  //   const switchTheme = (event) => {
+  //     if (event.target.checked) {
+  //       documentEl.setAttribute("data-theme", "dark");
+  //     } else {
+  //       documentEl.setAttribute("data-theme", "light");
+  //     }
+  //   };
+
+  //   // 4. Add event listener to toggle color theme
+  //   if (toggleBtn) {
+  //     toggleBtn.addEventListener("change", switchTheme);
+  //   }
+  // };
+
+  // Color Theme support and theme switching
+  // that will persist user settings
+  const colorTheme = () => {
+    // 1. Get current theme from Local Storage
+    const documentEl = document.documentElement;
+    const currentTheme = localStorage.getItem("theme");
+
+    // 2. Get toggle button
+    const toggleInput = document.getElementById("theme-input");
+
+    // 3. Check user preferences for darkmode support
+    // if they prefer darkmode and theme hasn't been set,
+    // let's set this automatically
+    const prefersDarkmode = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches;
+
+    if (!currentTheme && prefersDarkmode) {
+      documentEl.setAttribute("data-theme", "dark");
+      localStorage.setItem("theme", "dark");
+    }
+
+    // 4. Check if theme is set in Local Storage
+    // if it is, update the data-theme attribute
+    if (currentTheme) {
+      documentEl.setAttribute("data-theme", currentTheme);
+
+      if (currentTheme === "dark") {
+        toggleInput.checked = true;
+      }
+    }
+
+    // 5. Function to handle toggle event
+    // and save current state to Local Storage
+    const switchTheme = (event) => {
+      if (event.target.checked) {
+        documentEl.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        documentEl.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+      }
+    };
+
+    // 6. Add event listener to toggle color theme
+    if (toggleInput) {
+      toggleInput.addEventListener("change", switchTheme);
+    }
+  };
+
   // All function initialization goes here
   const init = () => {
     testForJS();
     navToggle();
     updateCurrentYear();
+    colorTheme();
   };
 
   // Call initialization function

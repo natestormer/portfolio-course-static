@@ -39,6 +39,14 @@
   --header-height: 5rem; /* 80px */
 }
 
+[data-theme="dark"] {
+  /* Define our thematic Custom Properties for Dark Mode support */
+  --font-color: var(--color-light);
+  --bg-main-color: var(--color-dark);
+  --bg-main-color-50o: var(--color-white-50o);
+  --bg-secondary-color: var(--color-black);
+}
+
 html,
 body {
   /* Web safe font stacks: https://css-tricks.com/snippets/css/font-stacks/ */
@@ -164,7 +172,7 @@ img {
 a,
 .link {
   text-decoration: underline;
-  color: #1f2525;
+  color: var(--font-color);
 }
 
 a:hover,
