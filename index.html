@@ -33,16 +33,10 @@
     <header class="header">
       <div class="header__layout max-width">
         <h1 class="branding">
-          <img
-            class="branding__img"
-            src="/img/brandmark.svg"
-            alt=""
-            width="90"
-            height="97"
-          />
-          <span class="branding__text body-text strong">
-            John Singer Sargent
-          </span>
+          <svg class="branding__img">
+            <use xlink:href="/img/svg/sprite.svg#brandmark" />
+          </svg>
+          <span class="branding__text strong"> John Singer Sargent </span>
         </h1>
         <nav class="header__nav">
           <h2 class="u-hidden-visually">Menu</h2>
@@ -56,9 +50,29 @@
               </span>
             </span>
           </button>
-          <label for="theme-input">
-            Darkmode
-            <input type="checkbox" name="theme-input" id="theme-input" />
+          <label
+            class="header__nav__theme-toggle theme-toggle"
+            for="theme-input"
+          >
+            <span class="theme-toggle__icon">
+              <svg
+                class="theme-toggle__icon__svg theme-toggle__icon__svg--light"
+              >
+                <use xlink:href="/img/svg/sprite.svg#sun" />
+              </svg>
+              <svg
+                class="theme-toggle__icon__svg theme-toggle__icon__svg--dark"
+              >
+                <use xlink:href="/img/svg/sprite.svg#moon" />
+              </svg>
+            </span>
+            <span class="u-hidden-visually">Toggle Dark Mode</span>
+            <input
+              class="u-hidden-visually"
+              type="checkbox"
+              name="theme-input"
+              id="theme-input"
+            />
           </label>
           <div class="nav-main">
             <ul class="nav-main__list">

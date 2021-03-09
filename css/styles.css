@@ -288,6 +288,16 @@ sup {
   }
 }
 
+.header__nav__theme-toggle {
+  order: -1;
+}
+
+@media all and (min-width: 1024px) {
+  .header__nav__theme-toggle {
+    order: 1;
+  }
+}
+
 /***
 // Branding Component
 ***/
@@ -308,6 +318,7 @@ sup {
   width: 2.875rem; /* 46px */
   height: 3.09875rem; /* 49.58px */
   margin-right: 1.5rem; /* 24px */
+  fill: var(--font-color);
 }
 
 .branding__text {
@@ -392,6 +403,42 @@ sup {
 
 .hamburger--close .hamburger__inner::after {
   transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/***
+// Theme Toggle
+***/
+.theme-toggle {
+  cursor: pointer;
+}
+
+.theme-toggle__icon {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 3rem; /* 48px */
+  height: 3rem; /* 48px */
+}
+
+.theme-toggle__icon__svg {
+  display: block;
+  width: 2rem; /* 32px */
+  height: 2rem; /* 32px */
+  fill: var(--font-color);
+}
+
+.theme-toggle__icon__svg--light {
+  width: 2.5rem; /* 40px */
+  height: 2.5rem; /* 40px */
+}
+
+[data-theme="light"] .theme-toggle__icon__svg--dark {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon__svg--light {
+  display: none;
 }
 
 /***
