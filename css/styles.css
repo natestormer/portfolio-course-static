@@ -587,6 +587,11 @@ sup {
 .footer__social__link {
   display: block;
   padding: 1rem 0.5rem; /* 16px 8px */
+  text-decoration: none;
+}
+
+.footer__social__link:hover {
+  text-decoration: underline;
 }
 
 /***
