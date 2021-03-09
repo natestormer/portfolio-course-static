@@ -81,3 +81,7 @@ Branch: [module-8-forms](https://github.com/natestormer/portfolio-course-static/
 #### Module 9 - CSS Layout Part 3 - CSS Grid
 
 Branch: [module-9-css-grid-layout](https://github.com/natestormer/portfolio-course-static/tree/module-9-css-grid-layout)
+
+#### Module 10 - Intro to JavaScript
+
+Branch: [module-10-basic-js](https://github.com/natestormer/portfolio-course-static/tree/module-10-basic-js)
