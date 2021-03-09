@@ -17,6 +17,7 @@
   --color-light: #ececf0;
   --color-white: #fff;
   --color-white-50o: rgba(255, 255, 255, 0.5);
+  --color-dark-90o: rgba(31, 37, 37, 0.9);
 
   /* Define our thematic Custom Properties (CSS variables) */
   --font-color: var(--color-dark);
@@ -43,7 +44,7 @@
   /* Define our thematic Custom Properties for Dark Mode support */
   --font-color: var(--color-light);
   --bg-main-color: var(--color-dark);
-  --bg-main-color-50o: var(--color-white-50o);
+  --bg-main-color-50o: var(--color-dark-90o);
   --bg-secondary-color: var(--color-black);
 }
 
