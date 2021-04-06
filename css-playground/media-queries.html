@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Queries in CSS</title>
-    <link rel="stylesheet" href="/css/styles.css" />
     <style>
       body,
       html {
         min-height: 100%;
         padding: 10%;
         box-sizing: border-box;
+        font-family: Helvetica, Arial, sans-serif;
+      }
+
+      /* Basic CSS for reponsive images */
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+      .current-query {
+        display: none;
+        margin: 1rem 0;
+        padding: 1rem;
+        font-weight: bold;
+        color: white;
+        background-color: rebeccapurple;
+        border-radius: 0.5rem;
       }
 
       /* We can target media display types */
@@ -19,12 +36,20 @@
         body {
           border: 10px solid blue;
         }
+
+        .current-query--screen {
+          display: block;
+        }
       }
 
       /* such as print */
       @media print {
         body {
           border: 10px solid red;
+        }
+
+        .current-query--print {
+          display: block;
         }
       }
 
@@ -37,6 +62,10 @@
         body {
           border: 10px solid darkturquoise;
         }
+
+        .current-query--aspect-1-1 {
+          display: block;
+        }
       }
 
       /* and the orientation of the screen viewports */
@@ -44,11 +73,19 @@
         body {
           background-color: khaki;
         }
+
+        .current-query--orientation-portrait {
+          display: block;
+        }
       }
 
       @media (orientation: landscape) {
         body {
           background-color: lightpink;
+        }
+
+        .current-query--orientation-landscape {
+          display: block;
         }
       }
 
@@ -58,9 +95,26 @@
         user preferences for contrast + motion, and much more:
         https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries#media_features
       */
+      a {
+        position: relative;
+        z-index: 1;
+        display: inline-block;
+        transition: all 5s ease-in-out;
+      }
+
+      a:hover,
+      a:focus {
+        color: rebeccapurple;
+        transform: scale(10, 10);
+      }
+
       @media (prefers-reduced-motion) {
-        a:hover {
+        a {
           transition: none;
+        }
+
+        .current-query--prefers-reduced-motion {
+          display: block;
         }
       }
 
@@ -71,13 +125,47 @@
       */
       @media screen and (min-width: 600px) {
         h1 {
-          max-width: 10ch;
+          max-width: 15;
+        }
+
+        .current-query--screen-and-min-width-600 {
+          display: block;
+        }
+      }
+
+      @media all and (max-width: 1024px) {
+        .current-query--screen-and-max-width-1024 {
+          display: block;
         }
       }
     </style>
   </head>
   <body>
     <h1 class="title1">Media Queries</h1>
+    <p class="current-query current-query--screen">Media: Screen</p>
+    <p class="current-query current-query--print">Media: Print</p>
+    <p class="current-query current-query--aspect-1-1">Aspect Ratio: 1:1</p>
+    <p class="current-query current-query--orientation-portrait">
+      Orientation: Portrait
+    </p>
+    <p class="current-query current-query--orientation-landscape">
+      Orientation: Landscape
+    </p>
+    <p class="current-query current-query--prefers-reduced-motion">
+      Prefers Reduced Motion
+    </p>
+    <p class="current-query current-query--screen-and-min-width-600">
+      Screen AND Min-Width: 600px
+    </p>
+    <p class="current-query current-query--screen-and-max-width-1024">
+      Screen AND Max-Width: 1024px
+    </p>
+    <img
+      src="http://unsplash.it/1200/850?random&gravity=center"
+      alt=""
+      width="1200"
+      height="850"
+    />
     <p class="body-text">
       <strong class="strong">Body Text: </strong>Lorem ipsum dolor sit amet,
       consectetur adipiscing elit. Fusce varius augue id commodo condimentum.
